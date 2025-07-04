@@ -1,0 +1,4131 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57322047938794,
+          12.977983828247986
+        ]
+      },
+      "properties": {
+        "Platform": "24",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "146",
+            "Destination": "Vivek Nagar",
+            "Via": "Nanjappa Circle",
+            "Area": "Austin Town",
+            "PlatformNumber": "24",
+            "KannadaDestination": "ವಿವೇಕನಗರ",
+            "KannadaArea": "ಆಸ್ಟಿನ್ ಟೌನ್",
+            "KannadaVia": "ನಂಜಪ್ಪ ವೃತ್ತ",
+            "Stops": [
+              "Corporation",
+              "Subbaiah Circle",
+              "Nanjappa Circle",
+              "Elgin Floor Mill",
+              "Johnson Market",
+              "Shoolay Circle Brigade Road",
+              "Philomenas Hospital",
+              "Vannarapet",
+              "Vivek Nagara"
+            ]
+          },
+          {
+            "Route": "111C",
+            "Destination": "Kavalbysandra",
+            "Via": "Mount Carmel College",
+            "Area": "RT Nagar",
+            "PlatformNumber": "24",
+            "KannadaDestination": "ಕಾವಲ ಬೈರಸಂದ್ರ",
+            "KannadaArea": "ಆರ್.ಟಿ. ನಗರ",
+            "KannadaVia": "ಮೌಂಟ್ ಕಾರ್ಮೆಲ್ ಕಾಲೇಜು",
+            "Stops": [
+              "Sophiya School",
+              "Mount Carmel College",
+              "Jayamahal",
+              "TV Tower",
+              "Matadahalli",
+              "RT Nagara Police Station",
+              "Sultanpalya Cross Pushpanjali Talkies",
+              "Kaval Byrasandra"
+            ]
+          },
+          {
+            "Route": "114C",
+            "Destination": "Sulthanapalya",
+            "Via": "Mount Carmel College",
+            "Area": "RT Nagar",
+            "PlatformNumber": "24",
+            "KannadaDestination": "ಸುಲ್ತಾನಪಾಳ್ಯ",
+            "KannadaArea": "ಆರ್.ಟಿ. ನಗರ",
+            "KannadaVia": "ಮೌಂಟ್ ಕಾರ್ಮೆಲ್ ಕಾಲೇಜು",
+            "Stops": [
+              "Sophiya School",
+              "Mount Carmel College",
+              "Jayamahal",
+              "TV Tower",
+              "Matadahalli",
+              "RT Nagara Police Station",
+              "Sultanpalya Cross Pushpanjali Talkies",
+              "Sultan palya"
+            ]
+          },
+          {
+            "Route": "415B",
+            "Destination": "V Nagenahalli",
+            "Via": "Sultanpalya",
+            "Area": "RT Nagar",
+            "PlatformNumber": "24",
+            "KannadaDestination": "ವಿ ನಾಗೇನಹಳ್ಳಿ",
+            "KannadaArea": "ಆರ್.ಟಿ. ನಗರ",
+            "KannadaVia": "ಸುಲ್ತಾನಪಾಳ್ಯ",
+            "Stops": []
+          },
+          {
+            "Route": "104",
+            "Destination": "Sadashivanagara",
+            "Via": "Malleshwara Circle",
+            "Area": "Sadashivanagar",
+            "PlatformNumber": "24",
+            "KannadaDestination": "ಸದಾಶಿವನಗರ",
+            "KannadaArea": "ಸದಾಶಿವನಗರ",
+            "KannadaVia": "ಮಲ್ಲೇಶ್ವರ ವೃತ್ತ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Bashyam Circle",
+              "Sadashivanagara"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57185540812151,
+          12.978432570121388
+        ]
+      },
+      "properties": {
+        "Platform": "20",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "302A",
+            "Destination": "Babusab Palya",
+            "Via": "banaswadi ayyappa temple",
+            "Area": "Banasawadi Main Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಬಾಬುಸಾಬ್ ಪಾಳ್ಯ",
+            "KannadaArea": "ಬಾಣಸವಾಡಿ ಮುಖ್ಯ ರಸ್ತೆ",
+            "KannadaVia": "ಬಾಣಸವಾಡಿ ಅಯ್ಯಪ್ಪ ದೇವಸ್ಥಾನ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Maruthi Sevanagara",
+              "Maruthi School",
+              "80ft Road HRBR Layout",
+              "HRBR Layout Cross",
+              "Babusabpalya 302"
+            ]
+          },
+          {
+            "Route": "302B",
+            "Destination": "Kalyan Nagar",
+            "Via": "Kammanahalli",
+            "Area": "Banasawadi Main Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಕಲ್ಯಾಣ ನಗರ",
+            "KannadaArea": "ಬಾಣಸವಾಡಿ ಮುಖ್ಯ ರಸ್ತೆ",
+            "KannadaVia": "ಕಮ್ಮನಹಳ್ಳಿ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Maruthi Sevanagara",
+              "Ramaswamypalya",
+              "Kammanahalli",
+              "Kalyananagara 302"
+            ]
+          },
+          {
+            "Route": "300H",
+            "Destination": "KR Pura",
+            "Via": "Banasawadi",
+            "Area": "Banasawadi Main Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಕೆಆರ್ ಪುರ",
+            "KannadaArea": "ಬಾಣಸವಾಡಿ ಮುಖ್ಯ ರಸ್ತೆ",
+            "KannadaVia": "ಬಾಣಸವಾಡಿ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Maruthi Sevanagara",
+              "Maruthi School",
+              "Banasawadi",
+              "B Channasandra Bridge",
+              "Ramamurthy Nagara Alada Mara",
+              "ITI Circle",
+              "Krishnaraja Pura Govt Hospital"
+            ]
+          },
+          {
+            "Route": "301F",
+            "Destination": "TC Palya",
+            "Via": "Banasawadi",
+            "Area": "Banasawadi Main Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಟಿಸಿ ಪಾಳ್ಯ",
+            "KannadaArea": "ಬಾಣಸವಾಡಿ ಮುಖ್ಯ ರಸ್ತೆ",
+            "KannadaVia": "ಬಾಣಸವಾಡಿ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Maruthi Sevanagara",
+              "Maruthi School",
+              "Banasawadi",
+              "B Channasandra Bridge",
+              "Kalkere Cross",
+              "TC Palya",
+              "Kittaganuru"
+            ]
+          },
+          {
+            "Route": "293S",
+            "Destination": "Bagaluru",
+            "Via": "Hennur",
+            "Area": "Hennur Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಬಾಗಲೂರು",
+            "KannadaArea": "ಹೆಣ್ಣೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಹೆಣ್ಣೂರು",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Lingarajapura",
+              "Hennuru Junction",
+              "Hennur",
+              "Byrathi Cross",
+              "Kannuru",
+              "Bagalur"
+            ]
+          },
+          {
+            "Route": "295A",
+            "Destination": "Dodda Gubbi",
+            "Via": "Gubbi Cross",
+            "Area": "Hennur Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ದೊಡ್ಡ ಗುಬ್ಬಿ",
+            "KannadaArea": "ಹೆಣ್ಣೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಗುಬ್ಬಿ ಕ್ರಾಸ್",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Lingarajapura",
+              "Hennuru Junction",
+              "Hennur",
+              "Byrathi Cross",
+              "Kyalasanahalli",
+              "Dodda Gubbi"
+            ]
+          },
+          {
+            "Route": "292C",
+            "Destination": "K Narayanapura",
+            "Via": "Hennuru",
+            "Area": "Hennur Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಕೆ ನಾರಾಯಣಪುರ",
+            "KannadaArea": "ಹೆಣ್ಣೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಹೆಣ್ಣೂರು",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Lingarajapura",
+              "Hennuru Junction",
+              "Hennur",
+              "Kristu Jayanti College",
+              "K Narayanapura Main Bus Stand"
+            ]
+          },
+          {
+            "Route": "293KA",
+            "Destination": "Mylanahalli",
+            "Via": "Bagaluru",
+            "Area": "Hennur Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಮೈಲಾನಹಳ್ಳಿ",
+            "KannadaArea": "ಹೆಣ್ಣೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಬಾಗಲೂರು",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Lingarajapura",
+              "Hennuru Junction",
+              "Hennur",
+              "Byrathi Cross",
+              "Kannuru",
+              "Bagalur",
+              "Mylanahalli"
+            ]
+          },
+          {
+            "Route": "293ZA",
+            "Destination": "Vijayapura",
+            "Via": "Bagaluru, Budigere",
+            "Area": "Hennur Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ವಿಜಯಪುರ",
+            "KannadaArea": "ಹೆಣ್ಣೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಬಾಗಲೂರು, ಬೂದಿಗೆರೆ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Lingarajapura",
+              "Hennuru Junction",
+              "Hennur",
+              "Byrathi Cross",
+              "Kannuru",
+              "Bagalur",
+              "Budigere",
+              "Vijayapura Bus Stand"
+            ]
+          },
+          {
+            "Route": "296A",
+            "Destination": "Yarappanahalli",
+            "Via": "Byrathi Bande",
+            "Area": "Hennur Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಯರಪ್ಪ ಬಂಡೆ",
+            "KannadaArea": "ಹೆಣ್ಣೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಬೈರತಿ ಬಂದೆ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Lingarajapura",
+              "Hennuru Junction",
+              "Hennur",
+              "Byrathi Cross",
+              "Chikka Gubbi",
+              "Yarappanahalli"
+            ]
+          },
+          {
+            "Route": "126",
+            "Destination": "Jeevanahalli",
+            "Via": "Shivajinagara",
+            "Area": "Shivajinagar",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಜೀವನಹಳ್ಳಿ",
+            "KannadaArea": "ಶಿವಾಜಿನಗರ",
+            "KannadaVia": "ಶಿವಾಜಿನಗರ",
+            "Stops": [
+              "Indian Express",
+              "Shivajinagara Bus Station",
+              "Commercial Street",
+              "Sindhi Colony",
+              "Cox Town",
+              "Jeevanahalli"
+            ]
+          },
+          {
+            "Route": "129",
+            "Destination": "Shivajinagar",
+            "Via": "Vidhana Soudha",
+            "Area": "Shivajinagar",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಶಿವಾಜಿನಗರ",
+            "KannadaArea": "ಶಿವಾಜಿನಗರ",
+            "KannadaVia": "ವಿಧಾನ ಸೌಧ",
+            "Stops": [
+              "Indian Express",
+              "Shivajinagara Bus Station"
+            ]
+          },
+          {
+            "Route": "V-129",
+            "Destination": "Shivajinagar",
+            "Via": "Vidhana Soudha",
+            "Area": "Shivajinagar",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಶಿವಾಜಿನಗರ",
+            "KannadaArea": "ಶಿವಾಜಿನಗರ",
+            "KannadaVia": "ವಿಧಾನ ಸೌಧ",
+            "Stops": [
+              "Indian Express",
+              "Shivajinagara Bus Station"
+            ]
+          },
+          {
+            "Route": "290J",
+            "Destination": "Mesthri Palya",
+            "Via": "Nagavara",
+            "Area": "Tannery Road-Nagawara",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಮೇಸ್ತ್ರಿ ಪಾಳ್ಯ",
+            "KannadaArea": "ಟ್ಯಾನರಿ ರಸ್ತೆ-ನಾಗವಾರ",
+            "KannadaVia": "ನಾಗವಾರ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Doddy",
+              "Kadugondanahalli Police Station",
+              "Nagawara Junction",
+              "Thanisandra",
+              "Rachenahalli",
+              "Mestripalya"
+            ]
+          },
+          {
+            "Route": "291H",
+            "Destination": "RK Hegde Nagar",
+            "Via": "Thanisandra",
+            "Area": "Tannery Road-Nagawara",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಆರ್ ಕೆ ಹೆಗಡೆ ನಗರ",
+            "KannadaArea": "ಟ್ಯಾನರಿ ರಸ್ತೆ-ನಾಗವಾರ",
+            "KannadaVia": "ಥಣಿಸಂದ್ರ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Doddy",
+              "Kadugondanahalli Police Station",
+              "Nagawara Junction",
+              "Thanisandra",
+              "K Narayanapura Cross",
+              "RK Hegde Nagara"
+            ]
+          },
+          {
+            "Route": "290B",
+            "Destination": "Thanisandra",
+            "Via": "Nagarvara",
+            "Area": "Tannery Road-Nagawara",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಥಣಿಸಂದ್ರ",
+            "KannadaArea": "ಟ್ಯಾನರಿ ರಸ್ತೆ-ನಾಗವಾರ",
+            "KannadaVia": "ನಾಗರವರ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Doddy",
+              "Kadugondanahalli Police Station",
+              "Nagawara Junction",
+              "Thanisandra"
+            ]
+          },
+          {
+            "Route": "290EY",
+            "Destination": "Yelahanka",
+            "Via": "RK Hegde Nagar",
+            "Area": "Tannery Road-Nagawara",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಯಲಹಂಕ",
+            "KannadaArea": "ಟ್ಯಾನರಿ ರಸ್ತೆ-ನಾಗವಾರ",
+            "KannadaVia": "ಆರ್ ಕೆ ಹೆಗಡೆ ನಗರ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Doddy",
+              "Kadugondanahalli Police Station",
+              "Nagawara Junction",
+              "Thanisandra",
+              "K Narayanapura Cross",
+              "Bellahalli Cross",
+              "Kogilu Cross",
+              "Yelahanka Old Town"
+            ]
+          },
+          {
+            "Route": "258DN",
+            "Destination": "Dabaspete",
+            "Via": "Nelamangala",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ದಾಬಾಸಪೇಟೆ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ನೆಲಮಂಗಲ",
+            "Stops": []
+          },
+          {
+            "Route": "255D",
+            "Destination": "Huskur Village",
+            "Via": "Makali",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ಹುಸ್ಕೂರು ಗ್ರಾಮ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಮಾಕಳಿ",
+            "Stops": []
+          },
+          {
+            "Route": "258C",
+            "Destination": "Nelamangala",
+            "Via": "Yeshwanthapura",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ನೆಲಮಂಗಲ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಯಶವಂತಪುರ",
+            "Stops": []
+          },
+          {
+            "Route": "258CC",
+            "Destination": "Nelamangala",
+            "Via": "Dr Rajkumar Road",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ನೆಲಮಂಗಲ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಡಾ ರಾಜ್‌ಕುಮಾರ್ ರಸ್ತೆ",
+            "Stops": []
+          },
+          {
+            "Route": "258M",
+            "Destination": "Thyamagondlu",
+            "Via": "Nelamangala",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20",
+            "KannadaDestination": "ತ್ಯಾಮಗೊಂಡ್ಲು",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ನೆಲಮಂಗಲ",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57276473985381,
+          12.978194618777184
+        ]
+      },
+      "properties": {
+        "Platform": "12",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "215N",
+            "Destination": "Anjanapura",
+            "Via": "KR Market",
+            "Area": "Banashankari",
+            "PlatformNumber": "12",
+            "KannadaDestination": "ಅಂಜನಾಪುರ",
+            "KannadaArea": "ಬನಶಂಕರಿ",
+            "KannadaVia": "ಕೃ ರಾ ಮಾರುಕಟ್ಟೆ",
+            "Stops": []
+          },
+          {
+            "Route": "215B",
+            "Destination": "Avalahalli BDA Layout",
+            "Via": "Konanakunte Cross",
+            "Area": "Banashankari",
+            "PlatformNumber": "12",
+            "KannadaDestination": "ಆವಲಹಳ್ಳಿ ಬಿಡಿಎ ಲೇಔಟ್",
+            "KannadaArea": "ಬನಶಂಕರಿ",
+            "KannadaVia": "ಕೋಣನಕುಂಟೆ ಕ್ರಾ‌ಸ್",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57308011964123,
+          12.9777949877761
+        ]
+      },
+      "properties": {
+        "Platform": "11",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "12",
+            "Destination": "Banashankari",
+            "Via": "Lalbagh",
+            "Area": "Banashankari",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ಬನಶಂಕರಿ",
+            "KannadaArea": "ಕನಕಪುರ ರಸ್ತೆ",
+            "KannadaVia": "ಲಾಲ್‌ ಬಾಗ್‌",
+            "Stops": []
+          },
+          {
+            "Route": "KBS5H",
+            "Destination": "Harohalli",
+            "Via": "Kaggalipura",
+            "Area": "Banashankari",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ಹಾರೋಹಳ್ಳಿ",
+            "KannadaArea": "ಬನಶಂಕರಿ",
+            "KannadaVia": "ಕಗ್ಗಲೀಪುರ",
+            "Stops": []
+          },
+          {
+            "Route": "210E",
+            "Destination": "Vasanthapura",
+            "Via": "Banashankari, Uttarahalli",
+            "Area": "Banashankari",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ವಸಂತಪುರ",
+            "KannadaArea": "ಕನಕಪುರ ರಸ್ತೆ",
+            "KannadaVia": "ಬನಶಂಕರಿ, ಉತ್ತರಹಳ್ಳಿ",
+            "Stops": []
+          },
+          {
+            "Route": "215H",
+            "Destination": "Jambusavaridinne",
+            "Via": "jayanagara 4th block",
+            "Area": "Jayanagara",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ಜಂಬೂಸವಾರಿ ದಿಣ್ಣೆ",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ಜಯನಗರ 4ನೇ ಬ್ಲಾಕ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "South End Circle",
+              "Jayanagara Bus Station",
+              "5th Block Jayanagara",
+              "Puttenahalli",
+              "RBI Layout",
+              "Kothanuru Dinne Ganesha Temple",
+              "Jambu Savari Dinne"
+            ]
+          },
+          {
+            "Route": "210A",
+            "Destination": "ISKCON Temple Maruthinagar",
+            "Via": "ISRO Layout",
+            "Area": "KR Road",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ಇಸ್ಕಾನ್ ದೇವಸ್ಥಾನ ಮಾರುತಿನಗರ",
+            "KannadaArea": "ಕೆ ಆರ್‌ ರಸ್ತೆ",
+            "KannadaVia": "ಇಸ್ರೋ ಲೇಔಟ್",
+            "Stops": []
+          },
+          {
+            "Route": "210AA",
+            "Destination": "ISKCON Temple Maruthinagar",
+            "Via": "BSK, ISRO Layout",
+            "Area": "KR Road",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ಇಸ್ಕಾನ್ ದೇವಸ್ಥಾನ ಮಾರುತಿನಗರ",
+            "KannadaArea": "ಕೆ ಆರ್‌ ರಸ್ತೆ",
+            "KannadaVia": "ಬನಶಂಕರಿ, ಇಸ್ರೋ ಲೇಔಟ್‌",
+            "Stops": []
+          },
+          {
+            "Route": "15E",
+            "Destination": "Kumaraswamy",
+            "Via": "Monotype",
+            "Area": "KR Road",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ಕುಮಾರಸ್ವಾಮಿ ಲೇಔಟ್",
+            "KannadaArea": "ಕೆ ಆರ್‌ ರಸ್ತೆ",
+            "KannadaVia": "ಮೊನೊಟೈಪ್",
+            "Stops": []
+          },
+          {
+            "Route": "15G",
+            "Destination": "Kumaraswamy Layout 2nd Stage",
+            "Via": "Monotype",
+            "Area": "KR Road",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ಕುಮಾರಸ್ವಾಮಿ ಲೇಔಟ್ 2ನೇ ಹಂತ",
+            "KannadaArea": "ಕೆ ಆರ್‌ ರಸ್ತೆ",
+            "KannadaVia": "ಮೊನೊಟೈಪ್",
+            "Stops": []
+          },
+          {
+            "Route": "210R",
+            "Destination": "Vasanthapura",
+            "Via": "ISRO Layout",
+            "Area": "KR Road",
+            "PlatformNumber": "11",
+            "KannadaDestination": "ವಸಂತಪುರ",
+            "KannadaArea": "ಕೆ ಆರ್‌ ರಸ್ತೆ",
+            "KannadaVia": "ಇಸ್ರೋ ಲೇಔಟ್",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.572084,
+          12.978237
+        ]
+      },
+      "properties": {
+        "Platform": "16",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "365P",
+            "Destination": "Anekal",
+            "Via": "Jigani",
+            "Area": "Bannerughatta Road",
+            "PlatformNumber": "16",
+            "KannadaDestination": "ಆನೇಕಲ್",
+            "KannadaArea": "ಬನ್ನೇರುಘಟ್ಟ ರಸ್ತೆ",
+            "KannadaVia": "ಜಿಗಣಿ",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Bengaluru Dairy Circle",
+              "JP Nagara 3rd Phase",
+              "Arakere Gate",
+              "Gottigere",
+              "Koli Farm Gate",
+              "Bannerughatta Circle",
+              "Ragihalli Gate",
+              "Jigani APC Circle",
+              "Anekal"
+            ]
+          },
+          {
+            "Route": "365",
+            "Destination": "Bannerughatta National Park",
+            "Via": "gottigere",
+            "Area": "Bannerughatta Road",
+            "PlatformNumber": "16",
+            "KannadaDestination": "ಬನ್ನೇರುಘಟ್ಟ ರಾಷ್ಟ್ರೀಯ ಉದ್ಯಾನವನ",
+            "KannadaArea": "ಬನ್ನೇರುಘಟ್ಟ ರಸ್ತೆ",
+            "KannadaVia": "ಗೊಟ್ಟಿಗೆರೆ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "JP Nagara 3rd Phase",
+              "Arakere Gate",
+              "Gottigere",
+              "Koli Farm Gate",
+              "Bannerughatta Circle",
+              "Bannerughatta National Park"
+            ]
+          },
+          {
+            "Route": "365D",
+            "Destination": "Bilavaradahalli",
+            "Via": "gottigere",
+            "Area": "Bannerughatta Road",
+            "PlatformNumber": "16",
+            "KannadaDestination": "ಬಿಲವರದಹಳ್ಳಿ",
+            "KannadaArea": "ಬನ್ನೇರುಘಟ್ಟ ರಸ್ತೆ",
+            "KannadaVia": "ಗೊಟ್ಟಿಗೆರೆ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "JP Nagara 3rd Phase",
+              "Arakere Gate",
+              "Gottigere",
+              "Koli Farm Gate",
+              "Bilavaradahalli"
+            ]
+          },
+          {
+            "Route": "369G",
+            "Destination": "Chikka Kammanahalli",
+            "Via": "Meenakshi Temple",
+            "Area": "Bannerughatta Road",
+            "PlatformNumber": "16",
+            "KannadaDestination": "ಚಿಕ್ಕ ಕಮ್ಮನಹಳ್ಳಿ",
+            "KannadaArea": "ಬನ್ನೇರುಘಟ್ಟ ರಸ್ತೆ",
+            "KannadaVia": "ಮೀನಾಕ್ಷಿ ದೇವಸ್ಥಾನ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "JP Nagara 3rd Phase",
+              "Arakere Gate",
+              "AECS Dental College",
+              "Chikka Kammanahalli"
+            ]
+          },
+          {
+            "Route": "369C",
+            "Destination": "Hulimavu",
+            "Via": "Arakere Gate",
+            "Area": "Bannerughatta Road",
+            "PlatformNumber": "16",
+            "KannadaDestination": "ಹುಳಿಮಾವು",
+            "KannadaArea": "ಬನ್ನೇರುಘಟ್ಟ ರಸ್ತೆ",
+            "KannadaVia": "ಅರಕೆರೆ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "JP Nagara 3rd Phase",
+              "Arakere Gate",
+              "Hulimavu"
+            ]
+          },
+          {
+            "Route": "365J",
+            "Destination": "Jigani APC Circle",
+            "Via": "Bannerughatta circle",
+            "Area": "Bannerughatta Road",
+            "PlatformNumber": "16",
+            "KannadaDestination": "ಜಿಗಣಿ ಎಪಿಸಿ ವೃತ್ತ",
+            "KannadaArea": "ಬನ್ನೇರುಘಟ್ಟ ರಸ್ತೆ",
+            "KannadaVia": "ಬನ್ನೇರುಘಟ್ಟ ವೃತ್ತ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "JP Nagara 3rd Phase",
+              "Arakere Gate",
+              "Gottigere",
+              "Koli Farm Gate",
+              "Bannerughatta Circle",
+              "Ragihalli Gate",
+              "Jigani APC Circle"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.572579,
+          12.978541
+        ]
+      },
+      "properties": {
+        "Platform": "22",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "271A",
+            "Destination": "Abbigere",
+            "Via": "Gangamma Circle",
+            "Area": "BEL",
+            "PlatformNumber": "22",
+            "KannadaDestination": "ಅಬ್ಬಿಗೆರೆ",
+            "KannadaArea": "ಬಿಇಎಲ್",
+            "KannadaVia": "ಗಂಗಮ್ಮ ವೃತ್ತ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Yeshawanthapura Circle",
+              "Mathikere",
+              "BEL Circle",
+              "Gangamma Circle",
+              "Kammagondanahalli Bridge",
+              "WIMAC Junction",
+              "Abbigere"
+            ]
+          },
+          {
+            "Route": "273C",
+            "Destination": "Jalahalli Cross",
+            "Via": "HMT",
+            "Area": "BEL",
+            "PlatformNumber": "22",
+            "KannadaDestination": "ಜಾಲಹಳ್ಳಿ ಕ್ರಾಸ್",
+            "KannadaArea": "ಬಿಇಎಲ್",
+            "KannadaVia": "ಹೆಚ್‌ ಎಂ ಟಿ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Yeshawanthapura Circle",
+              "Mathikere",
+              "BEL Circle",
+              "Jalahalli Police Station",
+              "HMT Post Office",
+              "Kammagondanahalli Bridge",
+              "Shettyhalli Cross",
+              "Jalahalli Cross"
+            ]
+          },
+          {
+            "Route": "266T",
+            "Destination": "Lakshmipura",
+            "Via": "MS Palya",
+            "Area": "BEL",
+            "PlatformNumber": "22",
+            "KannadaDestination": "ಲಕ್ಷ್ಮೀಪುರ",
+            "KannadaArea": "ಬಿಇಎಲ್",
+            "KannadaVia": "ಎಂಎಸ್ ಪಾಳ್ಯ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Yeshawanthapura Circle",
+              "Mathikere",
+              "BEL Circle",
+              "Gangamma Circle",
+              "Jalahalli East",
+              "MS Palya",
+              "Sambhram College",
+              "Lakshmipura"
+            ]
+          },
+          {
+            "Route": "273",
+            "Destination": "Peenya 2nd stage",
+            "Via": "HMT",
+            "Area": "BEL",
+            "PlatformNumber": "22",
+            "KannadaDestination": "ಪೀಣ್ಯ 2 ನೇ ಹಂತ",
+            "KannadaArea": "ಬಿಇಎಲ್",
+            "KannadaVia": "ಹೆಚ್‌ ಎಂ ಟಿ",
+            "Stops": []
+          },
+          {
+            "Route": "271C",
+            "Destination": "Singapura",
+            "Via": "Kuvempunagar 2nd Stage",
+            "Area": "BEL",
+            "PlatformNumber": "22",
+            "KannadaDestination": "ಸಿಂಗಾಪುರ",
+            "KannadaArea": "ಬಿಇಎಲ್",
+            "KannadaVia": "ಕುವೆಂಪುನಗರ 2ನೇ ಹಂತ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Yeshawanthapura Circle",
+              "Mathikere",
+              "BEL Circle",
+              "Gangamma Circle",
+              "Kuvempunagara",
+              "Singapura"
+            ]
+          },
+          {
+            "Route": "99B",
+            "Destination": "Chowdeshwari Bus Stand",
+            "Via": "Mathikere",
+            "Area": "Yeshwantpura",
+            "PlatformNumber": "22",
+            "KannadaDestination": "ಚೌಡೇಶ್ವರಿ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಯಶವಂತಪುರ",
+            "KannadaVia": "ಮತ್ತಿಕೆರೆ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Yeshawanthapura Circle",
+              "Mathikere",
+              "Chowdeshwarinagara JP Park"
+            ]
+          },
+          {
+            "Route": "99A",
+            "Destination": "Mohan Kumar Nagara",
+            "Via": "Chowdeshwari Bus Stand",
+            "Area": "Yeshwantpura",
+            "PlatformNumber": "22",
+            "KannadaDestination": "ಮೋಹನ್ ಕುಮಾರ್ ನಗರ",
+            "KannadaArea": "ಯಶವಂತಪುರ",
+            "KannadaVia": "ಚೌಡೇಶ್ವರಿ ಬಸ್ ನಿಲ್ದಾಣ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Yeshawanthapura Circle",
+              "Yeshawanthapura Market",
+              "Bombay Dyeing Yashwanthapura",
+              "Mathikere",
+              "Chowdeshwarinagara JP Park",
+              "Mohankumar Nagara"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.572249,
+          12.978559333505645
+        ]
+      },
+      "properties": {
+        "Platform": "21",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "276",
+            "Destination": "Vidyaranyapura",
+            "Via": "Ramaiah Hospital",
+            "Area": "BEL",
+            "PlatformNumber": "21",
+            "KannadaDestination": "ವಿದ್ಯಾರಣ್ಯಪುರ",
+            "KannadaArea": "ಬಿಇಎಲ್",
+            "KannadaVia": "ರಾಮಯ್ಯ ಆಸ್ಪತ್ರೆ",
+            "Stops": [
+              "Central",
+              "Malleshwara 18th Cross",
+              "Sadashivanagara Police Station",
+              "MS Ramaiah Hospital",
+              "Kuvempu Circle",
+              "BEL Circle",
+              "Dodda Bommasandra",
+              "Nanjappa Circle",
+              "1st Block Vidyaranyapura",
+              "Vidyaranyapura Bus Station"
+            ]
+          },
+          {
+            "Route": "82AR",
+            "Destination": "Yeshwanthapura New Railway Station",
+            "Via": "Gayathrinagara",
+            "Area": "Yeshwantpura",
+            "PlatformNumber": "21",
+            "KannadaDestination": "ಯಶವಂತಪುರ ಹೊಸ ರೈಲು ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಯಶವಂತಪುರ",
+            "KannadaVia": "ಗಾಯತ್ರಿನಗರ",
+            "Stops": [
+              "Central",
+              "Harishchandra Ghat",
+              "Gayathri Nagara",
+              "Subramanyanagara",
+              "Vivekananda College",
+              "Govt Soap Factory",
+              "RMC Yard (Yeshawanthapura New Railway Station)",
+              "Yeshawanthapura New Railway Station"
+            ]
+          },
+          {
+            "Route": "90E",
+            "Destination": "Yeshwanthapura Railway Station",
+            "Via": "MD Block",
+            "Area": "Yeshwantpura",
+            "PlatformNumber": "21",
+            "KannadaDestination": "ಯಶವಂತಪುರ ರೈಲು ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಯಶವಂತಪುರ",
+            "KannadaVia": "ಎಂ ಡಿ ಬ್ಲಾಕ್‌",
+            "Stops": [
+              "Central",
+              "MD Block",
+              "Malleshwara 8th Cross (8th Main)",
+              "Malleshwara 15th Cross (8th Main)",
+              "Malleshwaram 18th Cross",
+              "Mysore Lamp",
+              "Yeshawanthapura",
+              "Yeshawanthapura Market",
+              "Yeshawanthapura Railway Station"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57232410405848,
+          12.978156932578294
+        ]
+      },
+      "properties": {
+        "Platform": "8",
+        "Color": "#DE3D82",
+        "Routes": [
+          {
+            "Route": "45D",
+            "Destination": "AGS Layout",
+            "Via": "Hanumanthanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಎಜಿಎಸ್‌ ಲೇಔಟ್‌",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಹನುಮಂತನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Bank Colony",
+              "Hoskerehalli Cross",
+              "Janatha Bazaar",
+              "Ittamadu",
+              "AGS Layout Arehalli"
+            ]
+          },
+          {
+            "Route": "45B",
+            "Destination": "Bhuvaneshwarinagara",
+            "Via": "Kathriguppe Water Tank",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಭುವನೇಶ್ವರಿನಗರ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಕತ್ರಿಗುಪ್ಪೆ ವಾಟರ್‌ ಟ್ಯಾಂಕ್",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Bank Colony",
+              "Hoskerehalli Cross",
+              "Kathriguppe Water Tank",
+              "Kathriguppe",
+              "Bhuvaneshwari Nagara"
+            ]
+          },
+          {
+            "Route": "45F",
+            "Destination": "Channammanakere Achukattu",
+            "Via": "Hanumanthanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಚನ್ನಮ್ಮನಕೆರೆ ಅಚ್ಚುಕಟ್ಟು",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಹನುಮಂತನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Bank Colony",
+              "Hoskerehalli Cross",
+              "Janatha Bazaar",
+              "Kathriguppe",
+              "Kamakya Talkies",
+              "Channammanakere Achukattu"
+            ]
+          },
+          {
+            "Route": "45G",
+            "Destination": "Channammanakere Achukattu",
+            "Via": "Good Shed Road",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಚನ್ನಮ್ಮನಕೆರೆ ಅಚ್ಚುಕಟ್ಟು",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಗೂಡ್‌ ಶೆಡ್‌ ರಸ್ತೆ",
+            "Stops": [
+              "Super Talkies",
+              "Rayan Circle",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Bank Colony",
+              "Hoskerehalli Cross",
+              "Kathriguppe",
+              "Kamakya Talkies",
+              "Channammanakere Achukattu"
+            ]
+          },
+          {
+            "Route": "45E",
+            "Destination": "Channammanakere Achukattu",
+            "Via": "kathriguppe water tank",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಚನ್ನಮ್ಮನಕೆರೆ ಅಚ್ಚುಕಟ್ಟು",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಕತ್ರಿಗುಪ್ಪೆ ವಾಟರ್‌ ಟ್ಯಾಂಕ್",
+            "Stops": []
+          },
+          {
+            "Route": "43B",
+            "Destination": "Hosakerehalli",
+            "Via": "Hanumanthanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಹೊಸಕೆರೆಹಳ್ಳಿ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಹನುಮಂತನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Bank Colony",
+              "Hoskerehalli Cross",
+              "Hosakerehalli Petrol Bunk",
+              "Hoskerehalli"
+            ]
+          },
+          {
+            "Route": "V-45G",
+            "Destination": "Kamakya",
+            "Via": "Good Shed Road",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಕಾಮಾಕ್ಯ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಗೂಡ್‌ ಶೆಡ್‌ ರಸ್ತೆ",
+            "Stops": []
+          },
+          {
+            "Route": "43E",
+            "Destination": "Srividyanagara",
+            "Via": "Hanumanthanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ಶ್ರೀವಿದ್ಯಾನಗರ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಹನುಮಂತನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Bank Colony",
+              "Hoskerehalli Cross",
+              "Shri Vidhyanagara"
+            ]
+          },
+          {
+            "Route": "43A",
+            "Destination": "vivekanandanagar",
+            "Via": "vidyapeeta",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "8",
+            "KannadaDestination": "ವಿವೇಕಾನಂದನಗರ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ವಿದ್ಯಾಪೀಠ",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.572925,
+          12.977775
+        ]
+      },
+      "properties": {
+        "Platform": "10",
+        "Color": "#DE3D82",
+        "Routes": [
+          {
+            "Route": "36A",
+            "Destination": "Avalahalli BDA Park",
+            "Via": "Hanumanthanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "10",
+            "KannadaDestination": "ಆವಲಹಳ್ಳಿ ಬಿಡಿಎ ಪಾರ್ಕ್‌",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಹನುಮಂತನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Nirmala Store",
+              "Apex Bank",
+              "Girinagara",
+              "Avalahalli BDA Park Girinagara"
+            ]
+          },
+          {
+            "Route": "36B",
+            "Destination": "Girinagara Extension",
+            "Via": "Hanumanthanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "10",
+            "KannadaDestination": "ಗಿರಿನಗರ ಎಕ್ಸ್‌ ಟೆಂಷನ್‌",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಹನುಮಂತನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Nirmala Store",
+              "Apex Bank",
+              "Girinagara",
+              "Girinagara Extension"
+            ]
+          },
+          {
+            "Route": "36C",
+            "Destination": "Srinagara",
+            "Via": "Hanumanthanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "10",
+            "KannadaDestination": "ಶ್ರೀನಗರ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಹನುಮಂತನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Hanumanthanagara",
+              "Nirmala Store",
+              "Apex Bank",
+              "Srinagara"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.572806,
+          12.977988
+        ]
+      },
+      "properties": {
+        "Platform": "9",
+        "Color": "#DE3D82",
+        "Routes": [
+          {
+            "Route": "210P",
+            "Destination": "Chikkalasandra",
+            "Via": "Thyagarajanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "9",
+            "KannadaDestination": "ಚಿಕ್ಕಲಸಂದ್ರ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ತ್ಯಾಗರಾಜನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Basavanagudi Police Station",
+              "Thyagaraja Nagara",
+              "Devegowda Petrol Bunk",
+              "Prarthana School",
+              "Chikkallasandra Aralimara",
+              "Chikkallasandra"
+            ]
+          },
+          {
+            "Route": "210NP",
+            "Destination": "Poorna Prajna Layout",
+            "Via": "Thyagarajanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "9",
+            "KannadaDestination": "ಪೂರ್ಣಪ್ರಜ್ಞ ಲೇಔಟ್‌",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ತ್ಯಾಗರಾಜನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Basavanagudi Police Station",
+              "Thyagaraja Nagara",
+              "Devegowda Petrol Bunk",
+              "Prarthana School",
+              "Chikkallasandra Aralimara",
+              "Uttarahalli",
+              "Poornaprajnalayout NEW Bus Stand"
+            ]
+          },
+          {
+            "Route": "210N",
+            "Destination": "Uttarahalli",
+            "Via": "Thyagarajanagara",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "9",
+            "KannadaDestination": "ಉತ್ತರಹಳ್ಳಿ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ತ್ಯಾಗರಾಜನಗರ",
+            "Stops": [
+              "Corporation",
+              "KR Market",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Basavanagudi Police Station",
+              "Thyagaraja Nagara",
+              "Devegowda Petrol Bunk",
+              "Prarthana School",
+              "Chikkallasandra Aralimara",
+              "Uttarahalli"
+            ]
+          },
+          {
+            "Route": "210NG",
+            "Destination": "Uttarahalli",
+            "Via": "Good Shed Road",
+            "Area": "Chamarajapete",
+            "PlatformNumber": "9",
+            "KannadaDestination": "ಉತ್ತರಹಳ್ಳಿ",
+            "KannadaArea": "ಚಾಮರಾಜಪೇಟೆ",
+            "KannadaVia": "ಗೂಡ್‌ ಶೆಡ್‌ ರಸ್ತೆ",
+            "Stops": [
+              "Super Talkies",
+              "Rayan Circle",
+              "Chamarajapet",
+              "Ramakrishna Ashrama",
+              "Basavanagudi Police Station",
+              "Thyagaraja Nagara",
+              "Devegowda Petrol Bunk",
+              "Prarthana School",
+              "Chikkallasandra Aralimara",
+              "Uttarahalli"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57216942767839,
+          12.978122237557141
+        ]
+      },
+      "properties": {
+        "Platform": "7",
+        "Color": "#DE3D82",
+        "Routes": [
+          {
+            "Route": "80B",
+            "Destination": "Jai Maruthi Nagar",
+            "Via": "Nandini Layout",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ಜೈ ಮಾರುತಿ ನಗರ",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ನಂದಿನಿ ಲೇಔಟ್",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "Nandini Layout Bus Stand",
+              "Jai Maruthi Nagara"
+            ]
+          },
+          {
+            "Route": "80E",
+            "Destination": "Krishnananda Nagar",
+            "Via": "Mahalakshmi Layout",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ಕೃಷ್ಣಾನಂದ ನಗರ",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "2nd Stage Kanteeravanagara"
+            ]
+          },
+          {
+            "Route": "252H",
+            "Destination": "Laggere",
+            "Via": "Mahalakshmi Layout",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ಲಗ್ಗೆರೆ",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "Mahalakshmi Layout",
+              "Kanteerava Studio",
+              "Laggere Cross",
+              "Parvathi Nagara",
+              "Laggere New Bus Stand"
+            ]
+          },
+          {
+            "Route": "80",
+            "Destination": "Mahalakshmi Layout",
+            "Via": "Rajajinagar 1st Block",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ರಾಜಾಜಿನಗರ ೧ನೇ ಬ್ಲಾಕ್‌",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "Mahalakshmi Layout"
+            ]
+          },
+          {
+            "Route": "80A",
+            "Destination": "Nandini Layout",
+            "Via": "Rajajinagar 1st Block",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ನಂದಿನಿ ಲೇಔಟ್",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ರಾಜಾಜಿನಗರ ೧ನೇ ಬ್ಲಾಕ್‌",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "Nandini Layout Bus Stand"
+            ]
+          },
+          {
+            "Route": "252F",
+            "Destination": "Peenya 2nd Stage",
+            "Via": "Mahalakshmi Layout",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ಪೀಣ್ಯ 2ನೇ ಹಂತ",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "Mahalakshmi Layout",
+              "Kanteerava Studio",
+              "Laggere Cross",
+              "TVS Cross Peenya",
+              "NTTF Peenya",
+              "Peenya 2nd Stage"
+            ]
+          },
+          {
+            "Route": "80R",
+            "Destination": "Dr. Rajkumar Samadhi",
+            "Via": "Nandini Layout",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ರಾಜಕುಮಾರ್ ಸಮಾಧಿ",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ನಂದಿನಿ ಲೇಔಟ್",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "Nandini Layout Bus Stand",
+              "Ramakrishna Nagara",
+              "Rajkumar Punya Bhoomi"
+            ]
+          },
+          {
+            "Route": "80G",
+            "Destination": "Sumanahalli",
+            "Via": "Kanteerava Studio",
+            "Area": "ESI-Navrang",
+            "PlatformNumber": "7",
+            "KannadaDestination": "ಸುಮನಹಳ್ಳಿ",
+            "KannadaArea": "ಇಎಸ್ಐ-ನವರಂಗ್",
+            "KannadaVia": "ಕಂಠೀರವ ಸ್ಟುಡಿಯೋ",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "ESI Hospital Rajajinagara",
+              "Navarang Theatre",
+              "Ganesha Temple Mahalakshmi Layout",
+              "Mahalakshmi Layout",
+              "Kanteerava Studio",
+              "Nandini Layout Ring Road",
+              "Laggere Bridge",
+              "Summanahalli"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.573003,
+          12.978355
+        ]
+      },
+      "properties": {
+        "Platform": "23",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "289S",
+            "Destination": "Bagaluru",
+            "Via": "Venkatala",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23",
+            "KannadaDestination": "ಬಾಗಲೂರು",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ವೆಂಕಟಾಲ",
+            "Stops": []
+          },
+          {
+            "Route": "298M",
+            "Destination": "Devanahalli",
+            "Via": "Sadahalli Gate",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23",
+            "KannadaDestination": "ದೇವನಹಳ್ಳಿ",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ಸಾದಹಳ್ಳಿ ಗೇಟ್",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Yelahanka Santhe Circle",
+              "Bagalur Cross",
+              "Sadahalli Gate",
+              "Devanahalli Old Bus Stand"
+            ]
+          },
+          {
+            "Route": "298MP",
+            "Destination": "Vijayapura",
+            "Via": "Devanahalli",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23",
+            "KannadaDestination": "ವಿಜಯಪುರ",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ದೇವನಹಳ್ಳಿ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Yelahanka Santhe Circle",
+              "Bagalur Cross",
+              "Sadahalli Gate",
+              "Devanahalli Old Bus Stand",
+              "Vijayapura Bus Stand Jangamakote"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.573102,
+          12.978253
+        ]
+      },
+      "properties": {
+        "Platform": "23A",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "285M",
+            "Destination": "Doddaballapura",
+            "Via": "Yelahanka NES",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23A",
+            "KannadaDestination": "ದೊಡ್ಡಬಳ್ಳಾಪುರ",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ಯಲಹಂಕ ಎನ್ಇಎಸ್",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Yelahanka Police Station",
+              "Puttenahalli",
+              "Ramagondanahalli"
+            ]
+          },
+          {
+            "Route": "V-285M",
+            "Destination": "Doddaballapura",
+            "Via": "Yelahanka NES",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23A",
+            "KannadaDestination": "ದೊಡ್ಡಬಳ್ಳಾಪುರ",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ಯಲಹಂಕ ಎನ್ಇಎಸ್",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Yelahanka Police Station",
+              "Puttenahalli",
+              "Ramagondanahalli"
+            ]
+          },
+          {
+            "Route": "402C",
+            "Destination": "Atturu",
+            "Via": "Mother Dairy",
+            "Area": "Yelahanka ",
+            "PlatformNumber": "23A",
+            "KannadaDestination": "ಅಟ್ಟೂರು",
+            "KannadaArea": "ಯಲಹಂಕ",
+            "KannadaVia": "ಮದರ್ ಡೈರಿ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Yelahanka Police Station",
+              "Yelahanka Satellite Town",
+              "Mother Dairy Cross Yelahanka",
+              "Atturu Layout",
+              "Atturu"
+            ]
+          },
+          {
+            "Route": "402B",
+            "Destination": "Yelahanka 5th Phase",
+            "Via": "Yelahanka New Town",
+            "Area": "Yelahanka ",
+            "PlatformNumber": "23A",
+            "KannadaDestination": "ಯಲಹಂಕ 5ನೇ ಹಂತ",
+            "KannadaArea": "ಯಲಹಂಕ",
+            "KannadaVia": "ಯಲಹಂಕ ಉಪನಗರ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Yelahanka Police Station",
+              "Yelahanka Satellite Town",
+              "Mother Dairy Cross Yelahanka",
+              "5th Phase Yelahanka New Town"
+            ]
+          },
+          {
+            "Route": "284D",
+            "Destination": "Yelahanka New Town",
+            "Via": "Hebbala",
+            "Area": "Yelahanka ",
+            "PlatformNumber": "23A",
+            "KannadaDestination": "ಯಲಹಂಕ ಉಪನಗರ",
+            "KannadaArea": "ಯಲಹಂಕ",
+            "KannadaVia": "ಹೆಬ್ಬಾಳ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Yelahanka Police Station",
+              "Yelahanka Satellite Town"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.573218,
+          12.978114
+        ]
+      },
+      "properties": {
+        "Platform": "23B",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "279E",
+            "Destination": "Hebbala",
+            "Via": "Bhoopasandra",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23B",
+            "KannadaDestination": "ಹೆಬ್ಬಾಳ",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ಭೂಪಸಂದ್ರ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Ashwathnagara",
+              "Geddalahalli",
+              "Sanjayanagara",
+              "Nagashetty halli",
+              "Bhoopasandra",
+              "Hebbala"
+            ]
+          },
+          {
+            "Route": "286AA",
+            "Destination": "Jakkur layout",
+            "Via": "Byatarayanapura",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23B",
+            "KannadaDestination": "ಜಕ್ಕೂರು ಬಡಾವಣೆ",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ಬ್ಯಾಟರಾಯನಪುರ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Byatarayanapura",
+              "Amruthahalli",
+              "Jakkur Layout"
+            ]
+          },
+          {
+            "Route": "288D",
+            "Destination": "Kodigehalli",
+            "Via": "Sahakaranagara",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23B",
+            "KannadaDestination": "ಕೊಡಿಗೇಹಳ್ಳಿ",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ಸಹಕಾರನಗರ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Maruthi Nagara",
+              "Kodigehalli"
+            ]
+          },
+          {
+            "Route": "288H",
+            "Destination": "Thindlu",
+            "Via": "Kodigehalli",
+            "Area": "Hebbala ",
+            "PlatformNumber": "23B",
+            "KannadaDestination": "ತಿಂಡ್ಲು",
+            "KannadaArea": "ಹೆಬ್ಬಾಳ",
+            "KannadaVia": "ಕೊಡಿಗೇಹಳ್ಳಿ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Maruthi Nagara",
+              "Kodigehalli",
+              "Thindlu"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57151361222678,
+          12.977956466694335
+        ]
+      },
+      "properties": {
+        "Platform": "29A",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "304Z",
+            "Destination": "Chikka Thirupathi",
+            "Via": "Tin Factory",
+            "Area": "Hoodi-ITPL",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಚಿಕ್ಕ ತಿರುಪತಿ",
+            "KannadaArea": "ಹೂಡಿ-ಐಟಿಪಿಎಲ್",
+            "KannadaVia": "ಟಿನ್ ಫ್ಯಾಕ್ಟರಿ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Mahadevapura",
+              "Hoodi",
+              "ITPL",
+              "Channasandra",
+              "Chikka Thirupathi"
+            ]
+          },
+          {
+            "Route": "305D",
+            "Destination": "Channasandra",
+            "Via": "Tin Factory",
+            "Area": "Hoodi-ITPL",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಚನ್ನಸಂದ್ರ",
+            "KannadaArea": "ಹೂಡಿ-ಐಟಿಪಿಎಲ್",
+            "KannadaVia": "ಟಿನ್ ಫ್ಯಾಕ್ಟರಿ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Mahadevapura",
+              "Hoodi",
+              "ITPL",
+              "Channasandra"
+            ]
+          },
+          {
+            "Route": "305S",
+            "Destination": "Naduvatti",
+            "Via": "Tin Factory",
+            "Area": "Hoodi-ITPL",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ನಡುವತ್ತಿ",
+            "KannadaArea": "ಹೂಡಿ-ಐಟಿಪಿಎಲ್",
+            "KannadaVia": "ಟಿನ್ ಫ್ಯಾಕ್ಟರಿ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Mahadevapura",
+              "Hoodi",
+              "ITPL",
+              "Channasandra",
+              "Naduvatti"
+            ]
+          },
+          {
+            "Route": "KBS13K",
+            "Destination": "Kadugodi Bus Station",
+            "Via": "Tin Factory",
+            "Area": "Hoodi-ITPL",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಕಾಡುಗೋಡಿ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಹೂಡಿ-ಐಟಿಪಿಎಲ್",
+            "KannadaVia": "ಟಿನ್ ಫ್ಯಾಕ್ಟರಿ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Mahadevapura",
+              "Hoodi",
+              "ITPL",
+              "Kadugodi Bus Station"
+            ]
+          },
+          {
+            "Route": "315",
+            "Destination": "Krishnaraja Pura Govt Hospital",
+            "Via": "Halasuru",
+            "Area": "KR Pura",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಕೃಷ್ಣರಾಜ ಪುರ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ",
+            "KannadaArea": "ಕೆ.ಆರ್. ಪುರಂ",
+            "KannadaVia": "ಹಲಸೂರು",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Krishnaraja Pura Govt Hospital"
+            ]
+          },
+          {
+            "Route": "315MF",
+            "Destination": "Krishnaraja Pura Govt Hospital",
+            "Via": "Baiyappanahalli Back Gate",
+            "Area": "KR Pura",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಕೃಷ್ಣರಾಜ ಪುರ ಸರ್ಕಾರಿ ಆಸ್ಪತ್ರೆ",
+            "KannadaArea": "ಕೆ.ಆರ್. ಪುರಂ",
+            "KannadaVia": "ಬೈಯಪ್ಪನಹಳ್ಳಿ ಹಿಂಭಾಗದ ದ್ವಾರ",
+            "Stops": [
+              "Vidhana Soudha",
+              "Raj Bhavan",
+              "Manipal Centre MG Road",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Krishnaraja Pura Govt Hospital"
+            ]
+          },
+          {
+            "Route": "316B",
+            "Destination": "Budigere",
+            "Via": "KR Pura",
+            "Area": "KR Pura",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಬೂದಿಗೆರೆ",
+            "KannadaArea": "ಕೆ.ಆರ್. ಪುರಂ",
+            "KannadaVia": "ಕೃ ರಾ ಪುರ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Krishnaraja Pura Govt Hospital",
+              "TC Palya Gate Hosakote Road",
+              "Budigere Cross",
+              "Mandur",
+              "Budigere"
+            ]
+          },
+          {
+            "Route": "316F",
+            "Destination": "Cheemasandra",
+            "Via": "Tin Factory",
+            "Area": "KR Pura",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಚೀಮಸಂದ್ರ",
+            "KannadaArea": "ಕೆ.ಆರ್. ಪುರಂ",
+            "KannadaVia": "ಕೃ ರಾ ಪುರ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Krishnaraja Pura Govt Hospital",
+              "TC Palya Gate Hosakote Road",
+              "Cheemasandra"
+            ]
+          },
+          {
+            "Route": "317A",
+            "Destination": "Hosakote Bus Stand (Old)",
+            "Via": "Budigere Cross",
+            "Area": "KR Pura",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಹೊಸಕೋಟೆ ಬಸ್ ನಿಲ್ದಾಣ (ಹಳೆಯ)",
+            "KannadaArea": "ಕೆ.ಆರ್. ಪುರಂ",
+            "KannadaVia": "ಬೂದಿಗೆರೆ ಕ್ರಾಸ್",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Krishnaraja Pura Govt Hospital",
+              "TC Palya Gate Hosakote Road",
+              "Budigere Cross",
+              "Katamanallur Gate",
+              "Hosakote Bus Stand (Old)"
+            ]
+          },
+          {
+            "Route": "V-317A",
+            "Destination": "Hosakote Bus Stand (Old)",
+            "Via": "Budigere Cross",
+            "Area": "KR Pura",
+            "PlatformNumber": "29A",
+            "KannadaDestination": "ಹೊಸಕೋಟೆ ಬಸ್ ನಿಲ್ದಾಣ (ಹಳೆಯ)",
+            "KannadaArea": "ಕೆ.ಆರ್. ಪುರಂ",
+            "KannadaVia": "ಬೂದಿಗೆರೆ ಕ್ರಾಸ್",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Binnamangala",
+              "Tin Factory",
+              "Krishnaraja Pura Govt Hospital",
+              "TC Palya Gate Hosakote Road",
+              "Budigere Cross",
+              "Katamanallur Gate",
+              "Hosakote Bus Stand (Old)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57219815608771,
+          12.978279466285876
+        ]
+      },
+      "properties": {
+        "Platform": "15",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "356M",
+            "Destination": "Anekal",
+            "Via": "Chandapura",
+            "Area": "Hosur Road",
+            "PlatformNumber": "15",
+            "KannadaDestination": "ಆನೇಕಲ್",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಚಂದಾಪುರ",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "Bommasandra",
+              "Chandapura",
+              "Anekal"
+            ]
+          },
+          {
+            "Route": "V-356M",
+            "Destination": "Anekal",
+            "Via": "Chandapura",
+            "Area": "Hosur Road",
+            "PlatformNumber": "15",
+            "KannadaDestination": "ಆನೇಕಲ್",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಚಂದಾಪುರ",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "Bommasandra",
+              "Chandapura",
+              "Anekal"
+            ]
+          },
+          {
+            "Route": "V-EXP",
+            "Destination": "Anekal",
+            "Via": "Flyover",
+            "Area": "Hosur Road",
+            "PlatformNumber": "15",
+            "KannadaDestination": "ಆನೇಕಲ್",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಫ್ಲೈಓವರ್",
+            "Stops": []
+          },
+          {
+            "Route": "KBS3F",
+            "Destination": "Attibele",
+            "Via": "Flyover",
+            "Area": "Hosur Road",
+            "PlatformNumber": "15",
+            "KannadaDestination": "ಅತ್ತಿಬೆಲೆ",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಫ್ಲೈಓವರ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli FLY",
+              "Electronic City FLY",
+              "Bommasandra",
+              "Chandapura",
+              "Attibele Bus Stand"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57232,
+          12.978299
+        ]
+      },
+      "properties": {
+        "Platform": "14A",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "360K",
+            "Destination": "Attibele",
+            "Via": "Lalbagh",
+            "Area": "Hosur Road",
+            "PlatformNumber": "14A",
+            "KannadaDestination": "ಅತ್ತಿಬೆಲೆ",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಲಾಲ್‌ ಬಾಗ್‌",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "Bommasandra",
+              "Chandapura",
+              "Attibele Bus Stand"
+            ]
+          },
+          {
+            "Route": "KBS3A",
+            "Destination": "Attibele",
+            "Via": "Electronics City",
+            "Area": "Hosur Road",
+            "PlatformNumber": "14A",
+            "KannadaDestination": "ಅತ್ತಿಬೆಲೆ",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಸಿಟಿ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "Bommasandra",
+              "Chandapura",
+              "Attibele Bus Stand"
+            ]
+          },
+          {
+            "Route": "V-360B",
+            "Destination": "Attibele",
+            "Via": "Electronics City",
+            "Area": "Hosur Road",
+            "PlatformNumber": "14A",
+            "KannadaDestination": "ಅತ್ತಿಬೆಲೆ",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಸಿಟಿ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "Bommasandra",
+              "Chandapura",
+              "Attibele Bus Stand"
+            ]
+          },
+          {
+            "Route": "KBS3C",
+            "Destination": "Chandapura",
+            "Via": "Electronics City",
+            "Area": "Hosur Road",
+            "PlatformNumber": "14A",
+            "KannadaDestination": "ಚಂದಾಪುರ",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಸಿಟಿ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "Bommasandra",
+              "Chandapura"
+            ]
+          },
+          {
+            "Route": "V-356",
+            "Destination": "Chandapura",
+            "Via": "Electronics City",
+            "Area": "Hosur Road",
+            "PlatformNumber": "14A",
+            "KannadaDestination": "ಚಂದಾಪುರ",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಸಿಟಿ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "Bommasandra",
+              "Chandapura"
+            ]
+          },
+          {
+            "Route": "KBS3E",
+            "Destination": "Electronics City Wipro Gate",
+            "Via": "Konappana Agrahara",
+            "Area": "Hosur Road",
+            "PlatformNumber": "14A",
+            "KannadaDestination": "ಎಲೆಕ್ಟ್ರಾನಿಕ್ಸ್ ಸಿಟಿ ವಿಪ್ರೋ ಗೇಟ್",
+            "KannadaArea": "ಹೊಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಕೋನಪ್ಪನ ಅಗ್ರಹಾರ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Madivala",
+              "Central Silk Board",
+              "Bommanahalli",
+              "Electronic City",
+              "BHEL",
+              "Electronic City Wipro Main Gate"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.571761,
+          12.977969
+        ]
+      },
+      "properties": {
+        "Platform": "18",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "138",
+            "Destination": "Jeevanabheemanagara",
+            "Via": "Halasuru",
+            "Area": "Indiranagar",
+            "PlatformNumber": "18",
+            "KannadaDestination": "ಜೀವನಭೀಮನಗರ",
+            "KannadaArea": "ಇಂದಿರಾನಗರ",
+            "KannadaVia": "ಹಲಸೂರು",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Indiranagara Police Station/KFC",
+              "Thippasandra",
+              "Kodihalli",
+              "Jeevanbheema Nagara"
+            ]
+          },
+          {
+            "Route": "314D",
+            "Destination": "Mallesh Palya New Bus Stand (Vignana Nagara)",
+            "Via": "Thippasandra",
+            "Area": "Indiranagar",
+            "PlatformNumber": "18",
+            "KannadaDestination": "ಮಲ್ಲೇಶಪಾಳ್ಯ ಹೊಸ ಬಸ್‌ ನಿಲ್ದಾಣ (ವಿಜ್ಞಾನನಗರ)",
+            "KannadaArea": "ಇಂದಿರಾನಗರ",
+            "KannadaVia": "ತಿಪ್ಪಸಂದ್ರ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Indiranagara Police Station/KFC",
+              "Thippasandra",
+              "BEML Gate",
+              "GM Palya",
+              "Malleshpalya New Bus Station(Vignananagar)"
+            ]
+          },
+          {
+            "Route": "314H",
+            "Destination": "Mallesh Palya New Bus Stand (Vignana Nagara)",
+            "Via": "Thippasandra",
+            "Area": "Indiranagar",
+            "PlatformNumber": "18",
+            "KannadaDestination": "ಮಲ್ಲೇಶಪಾಳ್ಯ ಹೊಸ ಬಸ್‌ ನಿಲ್ದಾಣ (ವಿಜ್ಞಾನನಗರ)",
+            "KannadaArea": "ಇಂದಿರಾನಗರ",
+            "KannadaVia": "ತಿಪ್ಪಸಂದ್ರ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Halasuru",
+              "Indiranagara Police Station/KFC",
+              "Thippasandra",
+              "BEML Gate",
+              "GM Palya",
+              "Malleshpalya New Bus Station(Vignananagar)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57254679188304,
+          12.97828331379603
+        ]
+      },
+      "properties": {
+        "Platform": "13",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "364C",
+            "Destination": "btm layout 4th phase",
+            "Via": "devarachikkanahalli",
+            "Area": "Jayanagara",
+            "PlatformNumber": "13",
+            "KannadaDestination": "ಬಿಟಿಎಂ ಲೇಔಟ್ 4 ನೇ ಹಂತ",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ದೇವರಚಿಕ್ಕನಹಳ್ಳಿ",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "Ashoka Pillar",
+              "Jayanagara 4th Block",
+              "Carmel Convent Jayanagara",
+              "East End Jayanagara",
+              "JP Nagara 3rd Phase",
+              "Apollo Hospital",
+              "Vijaya Bank Layout Devarachikkanahalli",
+              "BTM Layout 4 Phase"
+            ]
+          },
+          {
+            "Route": "22",
+            "Destination": "byrasandra",
+            "Via": "jayanagara 3rd block",
+            "Area": "Jayanagara",
+            "PlatformNumber": "13",
+            "KannadaDestination": "ಬೈರಸಂದ್ರ",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ಜಯನಗರ 3ನೇ ಬ್ಲಾಕ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "Ashoka Pillar",
+              "Jayanagara 4th Block",
+              "Byrasandra New Bus Stand"
+            ]
+          },
+          {
+            "Route": "18",
+            "Destination": "Jayanagara 9th Block",
+            "Via": "jayanagara 4th block",
+            "Area": "Jayanagara",
+            "PlatformNumber": "13",
+            "KannadaDestination": "ಜಯನಗರ 9ನೇ ಬ್ಲಾಕ್",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ಜಯನಗರ 4ನೇ ಬ್ಲಾಕ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "Ashoka Pillar",
+              "Jayanagara 4th Block",
+              "9th Block Jayanagara (40th Cross)"
+            ]
+          },
+          {
+            "Route": "2",
+            "Destination": "JP Nagara 6th Phase",
+            "Via": "jayanagara 4th block",
+            "Area": "Jayanagara",
+            "PlatformNumber": "13",
+            "KannadaDestination": "ಜೆ.ಪಿ.ನಗರ 6ನೇ ಹಂತ",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ಜಯನಗರ 4ನೇ ಬ್ಲಾಕ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "Ashoka Pillar",
+              "Jayanagara 4th Block",
+              "Jayanagara 5th Block",
+              "Marenahalli",
+              "JP Nagara 1st Phase",
+              "JP Nagara 2nd Phase",
+              "JP Nagara 6th Phase"
+            ]
+          },
+          {
+            "Route": "25A",
+            "Destination": "Kuvempunagara (BTM)",
+            "Via": "jayanagara 4th block",
+            "Area": "Jayanagara",
+            "PlatformNumber": "13",
+            "KannadaDestination": "ಕುವೆಂಪುನಗರ (ಬಿಟಿಎಂ)",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ಜಯನಗರ 4ನೇ ಬ್ಲಾಕ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "Ashoka Pillar",
+              "Jayanagara 4th Block",
+              "Carmel Convent Jayanagara",
+              "East End Jayanagara",
+              "BTM Layout Water Tank",
+              "Kuvempunagara Bus station (BTM Layout"
+            ]
+          },
+          {
+            "Route": "V-25A",
+            "Destination": "Kuvempunagara (BTM)",
+            "Via": "jayanagara 4th block",
+            "Area": "Jayanagara",
+            "PlatformNumber": "13",
+            "KannadaDestination": "ಕುವೆಂಪುನಗರ (ಬಿಟಿಎಂ)",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ಜಯನಗರ 4ನೇ ಬ್ಲಾಕ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "Ashoka Pillar",
+              "Jayanagara 4th Block",
+              "Carmel Convent Jayanagara",
+              "East End Jayanagara",
+              "BTM Layout Water Tank",
+              "Kuvempunagara Bus station (BTM Layout"
+            ]
+          },
+          {
+            "Route": "25B",
+            "Destination": "Mahadeshwaranagara",
+            "Via": "jayanagara 4th block",
+            "Area": "Jayanagara",
+            "PlatformNumber": "13",
+            "KannadaDestination": "ಮಹದೇಶ್ವರನಗರ",
+            "KannadaArea": "ಜಯನಗರ",
+            "KannadaVia": "ಜಯನಗರ 4ನೇ ಬ್ಲಾಕ್",
+            "Stops": [
+              "Corporation",
+              "Lalbagh Main Gate",
+              "Lalbagh West Gate",
+              "Ashoka Pillar",
+              "Jayanagara 4th Block",
+              "Carmel Convent Jayanagara",
+              "East End Jayanagara",
+              "BTM Layout Water Tank",
+              "Anugraha Badavane (Bilekahalli)"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57258184391229,
+          12.977571179038927
+        ]
+      },
+      "properties": {
+        "Platform": "30",
+        "Color": "#5359E0",
+        "Routes": [
+          {
+            "Route": "KIA9",
+            "Destination": "Airport",
+            "Via": "Hebbala",
+            "Area": "Kempegowda International Airport",
+            "PlatformNumber": "30",
+            "KannadaDestination": "ವಿಮಾನ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಕೆಂಪೇಗೌಡ ಅಂತರಾಷ್ಟ್ರೀಯ ವಿಮಾನ ನಿಲ್ದಾಣ",
+            "KannadaVia": "ಹೆಬ್ಬಾಳ",
+            "Stops": [
+              "Shivananda Store",
+              "Mekhri Circle",
+              "Hebbala",
+              "Allalasandra Gate",
+              "Kogilu Cross",
+              "Trumpet (KIA)",
+              "Kempegowda International Airport"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57244599999999,
+          12.978299542530289
+        ]
+      },
+      "properties": {
+        "Platform": "14",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "171",
+            "Destination": "Koramangala",
+            "Via": "Koramangala Water Tank",
+            "Area": "Koramangala",
+            "PlatformNumber": "14",
+            "KannadaDestination": "ಕೋರಮಂಗಲ",
+            "KannadaArea": "ಕೋರಮಂಗಲ",
+            "KannadaVia": "ಕೋರಮಂಗಲ ವಾಟರ್ ಟ್ಯಾಂಕ್",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "MICO Factory Junction",
+              "Adugodi",
+              "Jyothi Nivas College",
+              "Koramangala Bus Station",
+              "BDA Complex Koramangala",
+              "Koramangala Water Tank",
+              "Koramangala 1st Block"
+            ]
+          },
+          {
+            "Route": "171G",
+            "Destination": "Koramangala",
+            "Via": "Sony World",
+            "Area": "Koramangala",
+            "PlatformNumber": "14",
+            "KannadaDestination": "ಕೋರಮಂಗಲ",
+            "KannadaArea": "ಕೋರಮಂಗಲ",
+            "KannadaVia": "ಸೋನಿ ವರ್ಲ್ಡ್",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "MICO Factory Junction",
+              "Adugodi",
+              "Jyothi Nivas College",
+              "Koramangala Bus Station",
+              "Maharaja Signal",
+              "Wipro Park Koramangala",
+              "Koramangala 1st Block"
+            ]
+          },
+          {
+            "Route": "V-342FD",
+            "Destination": "Dodda Kannalli",
+            "Via": "St Johns - Agara",
+            "Area": "Sarjapura",
+            "PlatformNumber": "14",
+            "KannadaDestination": "ದೊಡ್ಡ ಕನ್ನಲ್ಲಿ",
+            "KannadaArea": "ಕೋರಮಂಗಲ",
+            "KannadaVia": "ಸೇಂಟ್ ಜಾನ್ಸ್ - ಅಗರ",
+            "Stops": []
+          },
+          {
+            "Route": "342-F",
+            "Destination": "Sarjapura",
+            "Via": "St Johns - Agara",
+            "Area": "Sarjapura",
+            "PlatformNumber": "14",
+            "KannadaDestination": "ಸರ್ಜಾಪುರ",
+            "KannadaArea": "ಸರ್ಜಾಪುರ",
+            "KannadaVia": "ಸೇಂಟ್ ಜಾನ್ಸ್ - ಅಗರ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Koramangala 1st Block",
+              "Agara Junction",
+              "Ibbaluru",
+              "Carmelram Gate",
+              "Dommasandra",
+              "Sarjapura"
+            ]
+          },
+          {
+            "Route": "V-342F",
+            "Destination": "Sarjapura",
+            "Via": "St Johns - Agara",
+            "Area": "Sarjapura",
+            "PlatformNumber": "14",
+            "KannadaDestination": "ಸರ್ಜಾಪುರ",
+            "KannadaArea": "ಸರ್ಜಾಪುರ",
+            "KannadaVia": "ಸೇಂಟ್ ಜಾನ್ಸ್ - ಅಗರ",
+            "Stops": [
+              "Corporation",
+              "Shanthinagara Bus Station",
+              "Bengaluru Dairy Circle",
+              "St Johns Hospital",
+              "Koramangala 1st Block",
+              "Agara Junction",
+              "Ibbaluru",
+              "Carmelram Gate",
+              "Dommasandra",
+              "Sarjapura"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57248031217543,
+          12.978018829855005
+        ]
+      },
+      "properties": {
+        "Platform": "3",
+        "Color": "#44C131",
+        "Routes": [
+          {
+            "Route": "245Q",
+            "Destination": "Bettahalli",
+            "Via": "Magadi Road",
+            "Area": "Magadi Road",
+            "PlatformNumber": "3",
+            "KannadaDestination": "ಬೆಟ್ಟಹಳ್ಳಿ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gollarahatti",
+              "Kadabagere Cross",
+              "Bettahalli"
+            ]
+          },
+          {
+            "Route": "G7",
+            "Destination": "Janapriya Township",
+            "Via": "Sujatha",
+            "Area": "Magadi Road",
+            "PlatformNumber": "3",
+            "KannadaDestination": "ಜನಪ್ರಿಯ ಟೌನ್ ಶಿಪ್‌",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಸುಜಾತಾ",
+            "Stops": [
+              "Sujatha Talkies",
+              "6th Block Rajajinagar",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gollarahatti",
+              "Kadabagere Cross",
+              "Janapriya Township"
+            ]
+          },
+          {
+            "Route": "245GA",
+            "Destination": "Kadabagere",
+            "Via": "Magadi Road",
+            "Area": "Magadi Road",
+            "PlatformNumber": "3",
+            "KannadaDestination": "ಕಡಬಗೆರೆ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gollarahatti",
+              "Kadabagere Cross",
+              "Kadabagere"
+            ]
+          },
+          {
+            "Route": "245M",
+            "Destination": "Kamadhenu Kshetra",
+            "Via": "Magadi Road",
+            "Area": "Magadi Road",
+            "PlatformNumber": "3",
+            "KannadaDestination": "ಕಾಮಧೇನು ಕ್ಷೇತ್ರ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ವಡ್ಡರಹಳ್ಳಿ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gollarahatti",
+              "Kadabagere Cross",
+              "Kamadhenu Kshetra"
+            ]
+          },
+          {
+            "Route": "241G",
+            "Destination": "Seegehalli",
+            "Via": "Magadi Road",
+            "Area": "Magadi Road",
+            "PlatformNumber": "3",
+            "KannadaDestination": "ಸೀಗೇಹಳ್ಳಿ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gollarahatti",
+              "Kadabagere Cross",
+              "Seegehalli"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57214983144469,
+          12.977970017210728
+        ]
+      },
+      "properties": {
+        "Platform": "4",
+        "Color": "#44C131",
+        "Routes": [
+          {
+            "Route": "243J",
+            "Destination": "Bhavaninagara 2nd Stage",
+            "Via": "Anjananagara",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4",
+            "KannadaDestination": "ಭವಾನಿನಗರ ೨ನೇ ಹಂತ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಅಂಜನಾನಗರ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Anjananagara",
+              "Muddinapalya",
+              "RTO Office Vishweshwaraiah Layout",
+              "Bhavani Nagara 2nd Stage"
+            ]
+          },
+          {
+            "Route": "241B",
+            "Destination": "Kenchanapura",
+            "Via": "Gollarahatti",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4",
+            "KannadaDestination": "ಕೆಂಚನಪುರ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಗೊಲ್ಲರಹಟ್ಟಿ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gollarahatti",
+              "Yale Kodigehalli",
+              "Kannalli",
+              "Kenchanapura"
+            ]
+          },
+          {
+            "Route": "243L",
+            "Destination": "Linghandheeranahalli",
+            "Via": "Herohalli Cross",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4",
+            "KannadaDestination": "ಲಿಂಗಧೀರನಹಳ್ಳಿ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಹೇರೋಹಳ್ಳಿ ಕ್ರಾಸ್",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Herohalli Sunkadakatte",
+              "Syndicate Bank Layout",
+              "Lingadeeranahalli"
+            ]
+          },
+          {
+            "Route": "242B",
+            "Destination": "Tavarekere",
+            "Via": "Magadi Road",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4",
+            "KannadaDestination": "ತಾವರೆಕೆರೆ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gollarahatti",
+              "Kadabagere Cross",
+              "Tavarekere"
+            ]
+          },
+          {
+            "Route": "243D",
+            "Destination": "Thigalarapalya",
+            "Via": "Herohalli Cross",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4",
+            "KannadaDestination": "ತಿಗಳರಪಾಳ್ಯ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಹೇರೋಹಳ್ಳಿ ಕ್ರಾಸ್",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Syndicate Bank Layout",
+              "Andhrahalli",
+              "Thigalarapalya"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5720324200925,
+          12.977874637994585
+        ]
+      },
+      "properties": {
+        "Platform": "4A",
+        "Color": "#44C131",
+        "Routes": [
+          {
+            "Route": "241D",
+            "Destination": "Bramhadevara Gutte",
+            "Via": "Bharathnagara",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4A",
+            "KannadaDestination": "ಬ್ರಹ್ಮದೇವರಗುಟ್ಟೆ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಭಾರತ್‌ ನಗರ ೨ನೇ ಹಂತ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Bharath Nagara 2nd Stage",
+              "Bramhadevaragutte Extension"
+            ]
+          },
+          {
+            "Route": "243F",
+            "Destination": "Gidada Konenahalli",
+            "Via": "Sunkadakatte",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4A",
+            "KannadaDestination": "ಗಿಡದಕೋನೇನಹಳ್ಳಿ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಸುಂಕದಕಟ್ಟೆ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Gidadakonenahalli"
+            ]
+          },
+          {
+            "Route": "242T",
+            "Destination": "Hunnigere",
+            "Via": "Tavarekere",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4A",
+            "KannadaDestination": "ಹುಣ್ಣಿಗೆರೆ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ತಾವರೆಕೆರೆ",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5719528314447,
+          12.9777658656993
+        ]
+      },
+      "properties": {
+        "Platform": "4B",
+        "Color": "#44C131",
+        "Routes": [
+          {
+            "Route": "240H",
+            "Destination": "Linghandheeranahalli",
+            "Via": "Sunkadakatte",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4B",
+            "KannadaDestination": "ಲಿಂಗಧೀರನಹಳ್ಳಿ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಸುಂಕದಕಟ್ಟೆ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Lingadeeranahalli"
+            ]
+          },
+          {
+            "Route": "265",
+            "Destination": "Kempegowda Bus Stand",
+            "Via": "Sunkadakatte",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4B",
+            "KannadaDestination": "ಕೆಂಪೇಗೌಡ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಸುಂಕದಕಟ್ಟೆ ಜಾಲಹಳ್ಳಿ ಕ್ರಾಸ್‌",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Peenya 2nd Stage",
+              "Jalahalli Cross",
+              "Yeshawanthapura Bus Station",
+              "Kempegowda Bus Station"
+            ]
+          },
+          {
+            "Route": "241H",
+            "Destination": "Nagaraholenagara",
+            "Via": "Sunkadakatte",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4B",
+            "KannadaDestination": "ನಾಗರಹೊಳೆನಗರ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಸುಂಕದಕಟ್ಟೆ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Nagarahole Nagara"
+            ]
+          },
+          {
+            "Route": "265B",
+            "Destination": "Thigalarapalya",
+            "Via": "Peenya 2nd stage",
+            "Area": "Magadi Road",
+            "PlatformNumber": "4B",
+            "KannadaDestination": "ತಿಗಳರಪಾಳ್ಯ",
+            "KannadaArea": "ಮಾಗಡಿ ರಸ್ತೆ",
+            "KannadaVia": "ಪೀಣ್ಯ 2ನೇ ಹಂತ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "KHB Colony",
+              "Summanahalli",
+              "Sunkadakatte",
+              "Herohalli Cross",
+              "Peenya 2nd Stage",
+              "Andhrahalli",
+              "Thigalarapalya"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57161834984568,
+          12.97813301274626
+        ]
+      },
+      "properties": {
+        "Platform": "29",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "KBS1I",
+            "Destination": "Kadugodi Bus Station",
+            "Via": "Kundalahalli",
+            "Area": "Marathahalli ",
+            "PlatformNumber": "29",
+            "KannadaDestination": "ಕಾಡುಗೋಡಿ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಮಾರತಹಳ್ಳಿ",
+            "KannadaVia": "ಕುಂದಲಹಳ್ಳಿ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Domlur",
+              "HAL Main Gate",
+              "Marathahalli Bridge",
+              "Kundalahalli Gate",
+              "Graphite India",
+              "White Field Bus Station (Vydehi Hospital)",
+              "ITPL",
+              "Kadugodi Bus Station"
+            ]
+          },
+          {
+            "Route": "KBS1K",
+            "Destination": "Kadugodi Bus Station",
+            "Via": "Whitefield",
+            "Area": "Marathahalli ",
+            "PlatformNumber": "29",
+            "KannadaDestination": "ಕಾಡುಗೋಡಿ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಮಾರತಹಳ್ಳಿ",
+            "KannadaVia": "ವೈಟ್‌ಫೀಲ್ಡ್",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Domlur",
+              "HAL Main Gate",
+              "Marathahalli Bridge",
+              "Kundalahalli Gate",
+              "Varthur kodi",
+              "White Field Post Office",
+              "Kadugodi Bus Station"
+            ]
+          },
+          {
+            "Route": "333C",
+            "Destination": "Basavanagara",
+            "Via": "Domlur",
+            "Area": "Marathahalli ",
+            "PlatformNumber": "29",
+            "KannadaDestination": "ಬಸವನಗರ",
+            "KannadaArea": "ಮಾರತಹಳ್ಳಿ",
+            "KannadaVia": "ದೊಮ್ಮಲೂರು",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Domlur",
+              "HAL Main Gate",
+              "Rameshnagara",
+              "Basavanagara"
+            ]
+          },
+          {
+            "Route": "329H",
+            "Destination": "Bellikere",
+            "Via": "Varthur",
+            "Area": "Marathahalli ",
+            "PlatformNumber": "29",
+            "KannadaDestination": "ಬೆಳ್ಳಿಕೆರೆ",
+            "KannadaArea": "ಮಾರತಹಳ್ಳಿ",
+            "KannadaVia": "ವರ್ತೂರು",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Domlur",
+              "HAL Main Gate",
+              "Marathahalli Bridge",
+              "Kundalahalli Gate",
+              "Varthur kodi",
+              "Madhura Nagara",
+              "Bellikere"
+            ]
+          },
+          {
+            "Route": "332A",
+            "Destination": "Balagere",
+            "Via": "Varthur",
+            "Area": "Marathahalli ",
+            "PlatformNumber": "29",
+            "KannadaDestination": "ಬಳಗೆರೆ",
+            "KannadaArea": "ಮಾರತಹಳ್ಳಿ",
+            "KannadaVia": "ವರ್ತೂರು",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Domlur",
+              "HAL Main Gate",
+              "Marathahalli Bridge",
+              "Kundalahalli Gate",
+              "Varthur kodi",
+              "Varthuru",
+              "Balagere"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.571967,
+          12.978177
+        ]
+      },
+      "properties": {
+        "Platform": "17",
+        "Color": "#F68511",
+        "Routes": [
+          {
+            "Route": "V-335E",
+            "Destination": "Kadugodi Bus Station",
+            "Via": "Kundalahalli",
+            "Area": "Marathahalli ",
+            "PlatformNumber": "17",
+            "KannadaDestination": "ಕಾಡುಗೋಡಿ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಮಾರತಹಳ್ಳಿ",
+            "KannadaVia": "ಕುಂದಲಹಳ್ಳಿ",
+            "Stops": [
+              "Corporation",
+              "Richmond Circle",
+              "Mayohall",
+              "Domlur",
+              "HAL Main Gate",
+              "Marathahalli Bridge",
+              "Kundalahalli Gate",
+              "Graphite India",
+              "White Field Bus Station (Vydehi Hospital)",
+              "ITPL",
+              "Kadugodi Bus Station"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57266614464316,
+          12.977921448628171
+        ]
+      },
+      "properties": {
+        "Platform": "2",
+        "Color": "#44C131",
+        "Routes": [
+          {
+            "Route": "238C",
+            "Destination": "Bande Maramma BS",
+            "Via": "Nagarabhavi Circle",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ಬಂಡೆ ಮಾರಮ್ಮ ಬಸ್‌ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ನಾಗರಭಾವಿ ವೃತ್ತ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Bande Maramma Bus Station"
+            ]
+          },
+          {
+            "Route": "235K",
+            "Destination": "Dodda Basthi",
+            "Via": "University Quarter",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ದೊಡ್ಡ ಬಸ್ತಿ",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಕ್ವಾರ್ಟರ್",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Bengaluru University Quarters",
+              "Kenchanapura Cross",
+              "Sonnenahalli",
+              "Dodda Basti"
+            ]
+          },
+          {
+            "Route": "238UC",
+            "Destination": "Vishweshwaraiah Layout",
+            "Via": "Kengunte Circle",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ವಿಶ್ವೇಶ್ವರಯ್ಯ ಬಡಾವಣೆ",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ಕೆಂಗುಂಟೆ ವೃತ್ತ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Sir M Vishweshwaraiah Layout 9th Blk Mallathahalli"
+            ]
+          },
+          {
+            "Route": "234C",
+            "Destination": "Manganahalli",
+            "Via": "University Quarters",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ಮಂಗನಹಳ್ಳಿ",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ವಿಶ್ವವಿದ್ಯಾಲಯದ ಕ್ವಾರ್ಟರ್ಸ್",
+            "Stops": [
+              "Sujatha Talkies",
+              "6th Block Rajajinagar",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Bengaluru University Quarters",
+              "Amma Ashrama Cross",
+              "AGS Layout",
+              "Manganahalli"
+            ]
+          },
+          {
+            "Route": "238U",
+            "Destination": "Muddinapalya Junction",
+            "Via": "Ambedkar College",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ಮುದ್ದಿನಪಾಳ್ಯ ಜಂಕ್ಷನ್",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ಅಂಬೇಡ್ಕರ್ ಕಾಲೇಜು",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Deepa Complex",
+              "Annapoorneshwari nagara Cross",
+              "Muddinapalya Junction"
+            ]
+          },
+          {
+            "Route": "238UN",
+            "Destination": "Narsapura",
+            "Via": "Ambedkar College",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ನರಸಾಪುರ",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ಅಂಬೇಡ್ಕರ್ ಕಾಲೇಜು",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Deepa Complex",
+              "Annapoorneshwari nagara Cross",
+              "Srigandhada Kaval",
+              "Narasapura"
+            ]
+          },
+          {
+            "Route": "238W",
+            "Destination": "Narsapura",
+            "Via": "Ambedkar College",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ನರಸಾಪುರ",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ಅಂಬೇಡ್ಕರ್ ಕಾಲೇಜು",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Deepa Complex",
+              "Annapoorneshwari nagara Cross",
+              "Srigandhada Kaval",
+              "Narasapura"
+            ]
+          },
+          {
+            "Route": "238US",
+            "Destination": "Srigandhada Kaval",
+            "Via": "Ambedkar College",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ಶ್ರೀಗಂಧದ ಕಾವಲ್",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ಅಂಬೇಡ್ಕರ್ ಕಾಲೇಜು",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Deepa Complex",
+              "Annapoorneshwari nagara Cross",
+              "Srigandhada Kaval"
+            ]
+          },
+          {
+            "Route": "238UM",
+            "Destination": "Ullal Uppanagar",
+            "Via": "Muddinapalya",
+            "Area": "Mudalapalya-Nagarabhavi",
+            "PlatformNumber": "2",
+            "KannadaDestination": "ಉಲ್ಲಾಳು ಉಪನಗರ",
+            "KannadaArea": "ಮೂಡಲಪಾಳ್ಯ-ನಾಗರಭಾವಿ",
+            "KannadaVia": "ಮುದ್ದಿನಪಾಳ್ಯ",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Deepa Complex",
+              "Annapoorneshwari nagara Cross",
+              "Muddinapalya Junction",
+              "KLE Society College",
+              "Ullala Satelite Town"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.571433,
+          12.977914
+        ]
+      },
+      "properties": {
+        "Platform": "19",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "225C",
+            "Destination": "BEML 5th Stage",
+            "Via": "Bapujinagar",
+            "Area": "Mysuru Road",
+            "PlatformNumber": "19",
+            "KannadaDestination": "ಬಿಇಎಂಎಲ್‌ ೫ನೇ ಹಂತ",
+            "KannadaArea": "ಮೈಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಬಾಪೂಜಿನಗರ",
+            "Stops": [
+              "Rayan Circle",
+              "Chamarajapet",
+              "Mysore Road Bus Station",
+              "Nayandahalli",
+              "Rajarajeshwari nagara Gate",
+              "BEML Complex",
+              "Double Road BEML Layout",
+              "BEML Layout 5th stage"
+            ]
+          },
+          {
+            "Route": "226N",
+            "Destination": "Bidadi",
+            "Via": "Kengeri",
+            "Area": "Mysuru Road",
+            "PlatformNumber": "19",
+            "KannadaDestination": "ಬಿಡದಿ",
+            "KannadaArea": "ಮೈಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಕೆಂಗೇರಿ",
+            "Stops": [
+              "Rayan Circle",
+              "Chamarajapet",
+              "Mysore Road Bus Station",
+              "Nayandahalli",
+              "Rajarajeshwari nagara Gate",
+              "Bengaluru University Gate",
+              "Dubasipalya Cross",
+              "Kengeri Bus Station",
+              "Kumbalagodu",
+              "Bidadi"
+            ]
+          },
+          {
+            "Route": "218A",
+            "Destination": "Kambipura",
+            "Via": "Nayandahalli",
+            "Area": "Mysuru Road",
+            "PlatformNumber": "19",
+            "KannadaDestination": "ಕಂಬಿಪುರ",
+            "KannadaArea": "ಮೈಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ನಾಯಂಡಹಳ್ಳಿ",
+            "Stops": [
+              "Rayan Circle",
+              "Chamarajapet",
+              "Mysore Road Bus Station",
+              "Nayandahalli",
+              "Rajarajeshwari nagara Gate",
+              "Bengaluru University Gate",
+              "Dubasipalya Cross",
+              "Kengeri Bus Station",
+              "Kambipura"
+            ]
+          },
+          {
+            "Route": "227HA",
+            "Destination": "Kurubarapalya",
+            "Via": "Doddaladamara",
+            "Area": "Mysuru Road",
+            "PlatformNumber": "19",
+            "KannadaDestination": "ಕುರುಬರಪಾಳ್ಯ",
+            "KannadaArea": "ಮೈಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ದೊಡ್ಡ ಆಲದಮರ",
+            "Stops": [
+              "Rayan Circle",
+              "Chamarajapet",
+              "Mysore Road Bus Station",
+              "Nayandahalli",
+              "Rajarajeshwari nagara Gate",
+              "Bengaluru University Gate",
+              "Dubasipalya Cross",
+              "Kengeri Bus Station",
+              "Ramohalli",
+              "Kurubarapalya"
+            ]
+          },
+          {
+            "Route": "227RA",
+            "Destination": "Srinivasa Saligrama Temple",
+            "Via": "Ramohalli",
+            "Area": "Mysuru Road",
+            "PlatformNumber": "19",
+            "KannadaDestination": "ಶ್ರೀನಿವಾಸ ಸಾಲಿಗ್ರಾಮ ದೇವಸ್ಥಾನ",
+            "KannadaArea": "ಮೈಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ರಾಮೋಹಳ್ಳಿ",
+            "Stops": [
+              "Rayan Circle",
+              "Chamarajapet",
+              "Mysore Road Bus Station",
+              "Nayandahalli",
+              "Rajarajeshwari nagara Gate",
+              "Bengaluru University Gate",
+              "Dubasipalya Cross",
+              "Kengeri Bus Station",
+              "Ramohalli",
+              "Srinivasa Saligrama"
+            ]
+          },
+          {
+            "Route": "234E",
+            "Destination": "Ullal Upanagara",
+            "Via": "Jnanabharathi",
+            "Area": "Mysuru Road",
+            "PlatformNumber": "19",
+            "KannadaDestination": "ಉಲ್ಲಾಳು ಉಪನಗರ",
+            "KannadaArea": "ಮೈಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಜ್ಞಾನಭಾರತಿ",
+            "Stops": [
+              "Rayan Circle",
+              "Chamarajapet",
+              "Mysore Road Bus Station",
+              "Nayandahalli",
+              "Rajarajeshwari nagara Gate",
+              "Bengaluru University Gate",
+              "BUC Quarters",
+              "Manganahalli Cross",
+              "Ullalu",
+              "Ullala Satelite Town"
+            ]
+          },
+          {
+            "Route": "V-226WL",
+            "Destination": "Wonderla",
+            "Via": "Kengeri",
+            "Area": "Mysuru Road",
+            "PlatformNumber": "19",
+            "KannadaDestination": "ವಂಡರ್‌ ಲಾ",
+            "KannadaArea": "ಮೈಸೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಕೆಂಗೇರಿ",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.5718578553569,
+          12.97782709392093
+        ]
+      },
+      "properties": {
+        "Platform": "5",
+        "Color": "#DE3D82",
+        "Routes": [
+          {
+            "Route": "96B",
+            "Destination": "BEML Layout Kamalanagara",
+            "Via": "Basaveshwara Nagara",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "5",
+            "KannadaDestination": "ಬಿಇಎಂಎಲ್‌ ಲೇಔಟ್‌ ಕಮಲಾನಗರ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ಬಸವೇಶ್ವರನಗರ",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "Dhobi Ghat Rajajinagara",
+              "Havanur Circle",
+              "Basaveshwaranagara New Bus Stand",
+              "Kamalanagara BEML Layout"
+            ]
+          },
+          {
+            "Route": "96E",
+            "Destination": "BEML Layout Kamalanagara",
+            "Via": "Malleshwara Circle",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "5",
+            "KannadaDestination": "ಬಿಇಎಂಎಲ್‌ ಲೇಔಟ್‌ ಕಮಲಾನಗರ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ಮಲ್ಲೇಶ್ವರ ವೃತ್ತ",
+            "Stops": [
+              "Central",
+              "Malleshwara Circle",
+              "Harishchandra Ghat",
+              "Navarang Theatre",
+              "Shankar Mutt",
+              "8th Main Kamalanagara",
+              "Kamalanagara BEML Layout"
+            ]
+          },
+          {
+            "Route": "96A",
+            "Destination": "Kempegowda Bus Stand",
+            "Via": "Industrial Town",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "5",
+            "KannadaDestination": "ಕೆಂಪೇಗೌಡ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ಇಂಡಸ್ಟ್ರಿಯಲ್‌ ಟೌನ್‌",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "Dhobi Ghat Rajajinagara",
+              "Havanur Circle",
+              "Shankar Mutt",
+              "Navarang Theatre",
+              "Harishchandra Ghat",
+              "Malleshwara Circle",
+              "Central",
+              "Kempegowda Bus Station"
+            ]
+          },
+          {
+            "Route": "96G",
+            "Destination": "Shankarnag Bus Stand",
+            "Via": "Navarang - Shankar Mata",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "5",
+            "KannadaDestination": "ಶಂಕರನಾಗ್ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ನವ‌ರಂಗ್ - ಶಂಕರ ಮಠ",
+            "Stops": [
+              "Central",
+              "Malleshwara Circle",
+              "Harishchandra Ghat",
+              "Navarang Theatre",
+              "Shankar Mutt",
+              "Maruthi Temple Kamalanagara",
+              "Kamalanagara",
+              "Shankarnagh Bus Stand"
+            ]
+          },
+          {
+            "Route": "88",
+            "Destination": "Basaveshwara Nagara Bus Stand",
+            "Via": "Industrial Town",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "5",
+            "KannadaDestination": "ಬಸವೇಶ್ವರ ನಗರ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ಇಂಡಸ್ಟ್ರಿಯಲ್‌ ಟೌನ್‌",
+            "Stops": [
+              "Sujatha Talkies",
+              "Bashyam Circle Rajajinagara",
+              "Dhobi Ghat Rajajinagara",
+              "Havanur Circle",
+              "Basaveshwaranagara New Bus Stand"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57193906347379,
+          12.97796271269026
+        ]
+      },
+      "properties": {
+        "Platform": "6",
+        "Color": "#DE3D82",
+        "Routes": [
+          {
+            "Route": "89D",
+            "Destination": "JC Nagara",
+            "Via": "Malleshwara Circle",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "6",
+            "KannadaDestination": "ಜೆ ಸಿ ನಗರ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ಮಲ್ಲೇಶ್ವರ ವೃತ್ತ",
+            "Stops": [
+              "Central",
+              "Malleshwara Circle",
+              "Harishchandra Ghat",
+              "Navarang Theatre",
+              "Shankar Mutt",
+              "Kurubarahalli",
+              "JC Nagara Kurubarahalli"
+            ]
+          },
+          {
+            "Route": "96",
+            "Destination": "Kempegowda Bus Stand",
+            "Via": "Malleshwara Circle",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "6",
+            "KannadaDestination": "ಕೆಂಪೇಗೌಡ ಬಸ್ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ಮಲ್ಲೇಶ್ವರ ವೃತ್ತ",
+            "Stops": [
+              "Malleshwara Circle",
+              "Harishchandra Ghat",
+              "Navarang Theatre",
+              "Shankar Mutt",
+              "Havanur Circle",
+              "Dhobi Ghat Rajajinagara",
+              "Bashyam Circle Rajajinagara",
+              "Sujatha Talkies",
+              "Okalipura",
+              "Kempegowda Bus Station"
+            ]
+          },
+          {
+            "Route": "89C",
+            "Destination": "kaverinagara",
+            "Via": "Navarang - Shankar Mata",
+            "Area": "Rajajinagar",
+            "PlatformNumber": "6",
+            "KannadaDestination": "ಕಾವೇರಿನಗರ",
+            "KannadaArea": "ರಾಜಾಜಿನಗರ",
+            "KannadaVia": "ನವ‌ರಂಗ್ - ಶಂಕರ ಮಠ",
+            "Stops": [
+              "Central",
+              "Malleshwara Circle",
+              "Harishchandra Ghat",
+              "Navarang Theatre",
+              "Shankar Mutt",
+              "Kurubarahalli",
+              "Cauvery Nagara"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.571614,
+          12.978235
+        ]
+      },
+      "properties": {
+        "Platform": "19C",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "300MV",
+            "Destination": "SMVT Railway Station",
+            "Via": "Sevanagara",
+            "Area": "SMVT Railway Station",
+            "PlatformNumber": "19C",
+            "KannadaDestination": "ಎಸ್‌ ಎಂ ವಿ ಟಿ ರೈಲು ನಿಲ್ದಾಣ",
+            "KannadaArea": "SMVT ರೈಲು ನಿಲ್ದಾಣ",
+            "KannadaVia": "ಸೇವನಗರ",
+            "Stops": [
+              "Indian Express",
+              "Vasantha Nagara",
+              "Coles Park",
+              "Mosque Road",
+              "Maruthi Sevanagara",
+              "Sir M Vishweshwaraiah Railway Station"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.571942,
+          12.978477
+        ]
+      },
+      "properties": {
+        "Platform": "20A",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "250A",
+            "Destination": "Chikkabanavara",
+            "Via": "8th Mile",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20A",
+            "KannadaDestination": "ಚಿಕ್ಕಬಾಣಾವರ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "೮ನೇ ಮೈಲಿ",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.571942,
+          12.978477
+        ]
+      },
+      "properties": {
+        "Platform": "20A",
+        "Color": "#00B9FF",
+        "Routes": [
+          {
+            "Route": "250P",
+            "Destination": "Chikkabanavara",
+            "Via": "Dr Rajkumar Road",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20a",
+            "KannadaDestination": "ಚಿಕ್ಕಬಾಣಾವರ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಡಾ ರಾಜ್‌ಕುಮಾರ್ ರಸ್ತೆ",
+            "Stops": []
+          },
+          {
+            "Route": "253J",
+            "Destination": "Hesaraghatta",
+            "Via": "Chikkabanavara",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20a",
+            "KannadaDestination": "ಹೆಸರಘಟ್ಟ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಚಿಕ್ಕಬಾಣಾವರ",
+            "Stops": []
+          },
+          {
+            "Route": "265A",
+            "Destination": "KBS",
+            "Via": "Jalahalli Cross Sunkadakatte",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20a",
+            "KannadaDestination": "ಕೆಂಪೇಗೌಡ ಬಸ್‌ ನಿಲ್ದಾಣ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಜಾಲಹಳ್ಳಿ ಕ್ರಾಸ್ ಸುಂಕದಕಟ್ಟೆ",
+            "Stops": []
+          },
+          {
+            "Route": "252E",
+            "Destination": "Laggere",
+            "Via": "Jalahalli Cross",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20a",
+            "KannadaDestination": "ಲಗ್ಗೆರೆ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಜಾಲಹಳ್ಳಿ ಕ್ರಾಸ್",
+            "Stops": []
+          },
+          {
+            "Route": "253G",
+            "Destination": "Madhure Temple",
+            "Via": "Hesaraghatta",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20a",
+            "KannadaDestination": "ಮಧುರೆ ದೇವಸ್ಥಾನ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಹೆಸರಘಟ್ಟ",
+            "Stops": []
+          },
+          {
+            "Route": "252",
+            "Destination": "Peenya 2nd Stage",
+            "Via": "Jalahalli Cross",
+            "Area": "Tumakuru Road",
+            "PlatformNumber": "20a",
+            "KannadaDestination": "ಪೀಣ್ಯ 2ನೇ ಹಂತ",
+            "KannadaArea": "ತುಮಕೂರು ರಸ್ತೆ",
+            "KannadaVia": "ಜಾಲಹಳ್ಳಿ ಕ್ರಾಸ್",
+            "Stops": []
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.57280056087696,
+          12.977731999999984
+        ]
+      },
+      "properties": {
+        "Platform": "1",
+        "Color": "#44C131",
+        "Routes": [
+          {
+            "Route": "61A",
+            "Destination": "Chandra Layout",
+            "Via": "Vijayanagar",
+            "Area": "Vijaynagar ",
+            "PlatformNumber": "1",
+            "KannadaDestination": "ಚಂದ್ರ ಲೇಔಟ್‌",
+            "KannadaArea": "ವಿಜಯನಗರ",
+            "KannadaVia": "ವಿಜಯನಗರ",
+            "Stops": [
+              "Sujatha Talkies",
+              "6th Block Rajajinagar",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Chandra Public School",
+              "Chandra Layout"
+            ]
+          },
+          {
+            "Route": "61J",
+            "Destination": "Chandra Layout 1st stage",
+            "Via": "Chandra Layout",
+            "Area": "Vijaynagar ",
+            "PlatformNumber": "1",
+            "KannadaDestination": "ಚಂದ್ರ ಲೇಔಟ್ 1 ನೇ ಹಂತ",
+            "KannadaArea": "ವಿಜಯನಗರ",
+            "KannadaVia": "ಚಂದ್ರ ಲೇಔಟ್‌",
+            "Stops": [
+              "Sujatha Talkies",
+              "6th Block Rajajinagar",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Chandra Public School",
+              "Ganesha Temple Chandra Layout",
+              "Chandra Layout 1st Stage"
+            ]
+          },
+          {
+            "Route": "87",
+            "Destination": "Hampinagar",
+            "Via": "Pipeline",
+            "Area": "Vijaynagar ",
+            "PlatformNumber": "1",
+            "KannadaDestination": "ಹಂಪಿನಗರ",
+            "KannadaArea": "ವಿಜಯನಗರ",
+            "KannadaVia": "ಪೈಪ್‌ ಲೈನ್‌",
+            "Stops": [
+              "1st Cross Magadi Road",
+              "Magadi Road Metro Station",
+              "Magadi Road Tollgate",
+              "Pipeline Binni Layout",
+              "Hampinagara Post Office",
+              "Hampinagara RPC Layout"
+            ]
+          },
+          {
+            "Route": "238V",
+            "Destination": "Muddinapalya Junction",
+            "Via": "Chandra Layout",
+            "Area": "Vijaynagar",
+            "PlatformNumber": "1",
+            "KannadaDestination": "ಮುದ್ದಿನಪಾಳ್ಯ ಜಂಕ್ಷನ್",
+            "KannadaArea": "ವಿಜಯನಗರ",
+            "KannadaVia": "ಚಂದ್ರ ಲೇಔಟ್",
+            "Stops": [
+              "Sujatha Talkies",
+              "6th Block Rajajinagar",
+              "Magadi Road Tollgate",
+              "Vijayanagara",
+              "Prashanth Nagara",
+              "Nagarabhavi Circle",
+              "Kengunte Circle",
+              "Deepa Complex",
+              "Annapoorneshwari nagara Cross",
+              "Muddinapalya Junction"
+            ]
+          },
+          {
+            "Route": "238VM",
+            "Destination": "Ullal Upanagar",
+            "Via": "Chandra Layout",
+            "Area": "Vijaynagar ",
+            "PlatformNumber": "1",
+            "KannadaDestination": "ಉಲ್ಲಾಳು ಉಪನಗರ",
+            "KannadaArea": "ವಿಜಯನಗರ",
+            "KannadaVia": "ಚಂದ್ರ ಲೇಔಟ್",
+            "Stops": []
+          }
+        ]
+      }
+    }
+  ]
+}
