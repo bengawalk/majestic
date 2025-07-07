@@ -20,6 +20,7 @@
     if (type === 'Area' || type === 'Via') return '+';
     if (type === 'Stop') return '-';
     if (type === 'Route') return '=';
+    if (type === 'Platform') return '#';
     return '';
   }
 

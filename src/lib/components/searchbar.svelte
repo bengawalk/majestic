@@ -115,13 +115,13 @@
     const areaViaSet = new Map<string, {type: string, display: string, displayKannada: string, value: string}>();
     const stopSet = new Map<string, {display: string, displayKannada: string, value: string}>();
     const routeSet = new Map<string, {display: string, value: string}>();
-    const platformSet = new Map<string, {type: string, display: string, value: string}>
+    // const platformSet = new Map<string, {type: string, display: string, value: string}>
     for (const route of allRoutes) {
-      if (route.platformNumber)
-        if (route.platformNumber.toLowerCase().includes(q)) {
-          platformSet.set(route.platformNumber, {type: 'Platform', display: route.platformNumber, value: route.platformNumber});
-          matched.add(route);
-        }
+      // if (route.platformNumber)
+        // if (route.platformNumber.toLowerCase().includes(q)) {
+        //   platformSet.set(route.platformNumber, {type: 'Platform', display: `Platform ${route.platformNumber}`, value: route.platformNumber});
+        //   matched.add(route);
+        // }
       // Area
       if (route.area) {
         if (
@@ -184,10 +184,10 @@
       }
     }
     suggestions = [
-      ...Array.from(platformSet.values()),
+      ...Array.from(stopSet.values()).map(obj => ({ type: 'Stop', value: obj.value, display: obj.display, displayKannada: obj.displayKannada })),
       ...Array.from(areaViaSet.values()),
+      // ...Array.from(platformSet.values()),
       ...Array.from(routeSet.entries()).map(([r, obj]) => ({ type: 'Route', value: obj.value, display: obj.display })),
-      ...Array.from(stopSet.values()).map(obj => ({ type: 'Stop', value: obj.value, display: obj.display, displayKannada: obj.displayKannada }))
     ];
     setResults(Array.from(matched));
   } else {

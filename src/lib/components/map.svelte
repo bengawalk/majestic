@@ -208,6 +208,42 @@
                             }
                         }
                     });
+
+                    // Add GeolocateControl to show user location if permission is granted
+                    const geolocate = new maplibregl.GeolocateControl({
+                        positionOptions: { enableHighAccuracy: true },
+                        trackUserLocation: true,
+                        showUserHeading: true,
+                        showUserLocation: true,
+                        showAccuracyCircle: true,
+                        fitBoundsOptions: { maxZoom: map.getZoom() }, // Prevent zooming in
+                        flyTo: false // Prevent flying to user location
+                    });
+                    map.addControl(geolocate);
+
+                    // Hide the geolocate control button via CSS
+                    map.once('render', () => {
+                        const controls = document.getElementsByClassName('maplibregl-ctrl-geolocate');
+                        for (const ctrl of controls) {
+                            ctrl.style.display = 'none';
+                        }
+                    });
+
+                    // Request user location on map load, but do not fly to it
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(
+                            (pos) => {
+                                // Permission granted, update the geolocate control's marker without flying
+                                // This is a workaround: set the control's _lastKnownPosition and emit the event
+                                if (geolocate._updateMarker) {
+                                    geolocate._updateMarker({ coords: pos.coords });
+                                }
+                            },
+                            () => {
+                                // Permission denied or failed, do nothing
+                            }
+                        );
+                    }
                 });
         });
 
@@ -225,4 +261,6 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+/* Hide the geolocate control button */
+.maplibregl-ctrl-geolocate { display: none !important; }
 </style>

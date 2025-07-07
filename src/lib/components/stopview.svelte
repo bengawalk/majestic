@@ -16,7 +16,8 @@
 
   if ($selectedItem) {
     if($selectedItem.type === 'Platform') {
-      mainRoutes = all.filter(r => r.platformNumber === $selectedItem.display);
+      console.log($selectedItem);
+      mainRoutes = all.filter(r => r.platformNumber.trim() === $selectedItem.display.trim());
     }
     if ($selectedItem.type === 'Stop') {
       mainRoutes = all.filter(r => r.stops && r.stops.some(s => s.name === $selectedItem.display));

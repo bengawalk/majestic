@@ -5,7 +5,7 @@ from collections import defaultdict
 # File paths
 platform_index_path = 'input/platform-index.csv'
 # bus_routes_path = 'input/bus-routes.csv'
-bus_stops_path = 'input/bus-stops.csv'
+bus_stops_path = 'input/bus-stops-2.csv'
 platforms_geojson_path = 'input/platforms-majestic.geojson'
 output_geojson_path = 'static/data/platforms-routes-majestic.geojson'
 
@@ -98,9 +98,9 @@ for plat_num, plat_rows in platform_index.items():
             # print(f"Route {bus_number} (Platform {plat_num}): {len(stops)} stops from {stops_source}")
             route_obj = {
                 'Route': bus_number,
-                'Destination': plat_row['Destination'],
-                'Via': plat_row['Via'],
-                'Area': plat_row['Area'],
+                'Destination': plat_row['Destination'].strip(),
+                'Via': plat_row['Via'].strip(),
+                'Area': plat_row['Area'].strip(),
                 'PlatformNumber': plat_row['Platform Number'].upper(),
                 'KannadaDestination': plat_row['Destination - Kannada'],
                 'KannadaArea': plat_row['Area - Kannada'],
