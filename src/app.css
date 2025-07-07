@@ -1,8 +1,21 @@
 @import 'tailwindcss';
 @import 'maplibre-gl/dist/maplibre-gl.css';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
-html, body {
-  height: 100%;
+html, body, #svelte {
+  height: 100dvh;
   margin: 0;
   padding: 0;
+  overflow: visible;
+  /* Safari-specific properties to prevent pull-to-refresh and overscroll */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: none;
+  touch-action: manipulation;
+}
+#map-container {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100lvw;
+  height: 100dvh;
+  overflow: hidden;
 }

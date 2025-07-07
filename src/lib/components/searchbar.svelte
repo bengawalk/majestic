@@ -2,14 +2,16 @@
   import { routes } from '$lib/stores/routes';
   import { setResults } from '$lib/stores/results';
   import { get } from 'svelte/store';
-  import { createEventDispatcher, onMount } from 'svelte';
+  import {createEventDispatcher, onMount, tick} from 'svelte';
   import Dropdown from './dropdown.svelte';
+  import { search } from '$lib/stores/search';
+  import {previousSelectedItem} from "$lib/stores/selectedItem";
 
-
-  export let search: string;
   export let searchFocused: boolean;
   export let searchInput: HTMLInputElement | null = null;
   export let voiceSearchActive: boolean = false;
+  export let selectedItem: any = null;
+  export let showBackButton: boolean = false;
 
   let speechSupported = false;
   let recognizing = false;
@@ -32,7 +34,7 @@
       recognition.onstart = () => voiceSearchActive = true;
       recognition.onresult = (event: any) => {
         if (event.results && event.results[0] && event.results[0][0]) {
-          search = event.results[0][0].transcript;
+          search.set(event.results[0][0].transcript);
           setTimeout(() => {
             if (dropdownRef && typeof dropdownRef.selectFirst === 'function') {
               dropdownRef.selectFirst();
@@ -65,44 +67,61 @@
   }
 
   function clearSearch() {
-    search = '';
+    search.set('');
+    selectedItem.set(undefined);
+    previousSelectedItem.set(undefined);
     searchInput?.focus();
   }
 
   function handleBack() {
-    search = '';
+    selectedItem.set(undefined);
+    previousSelectedItem.set(undefined);
+    search.set('');
     searchFocused = false;
     voiceSearchActive = false;
     setResults(get(routes));
     dispatch('back');
+    dispatch('closeSheet');
     searchInput?.blur();
   }
 
   function handleSelectSuggestion(s) {
-    search = s.display;
-    searchFocused = false;
-    voiceSearchActive = false;
+    selectedItem.set(undefined);
+    previousSelectedItem.set(undefined);
+    tick().then( () => {
+      search.set(s.display);
+      searchFocused = false;
+      voiceSearchActive = false;
+      dispatch('select', s);
+    });
   }
 
   // Search logic: by destination or bus number (not platform)
-  $: if (search && search.trim().length > 0) {
-    const q = search.trim().toLowerCase();
+  $: if ($search && $search.trim().length > 0) {
+    const q = $search.trim().toLowerCase();
     const allRoutes = get(routes);
+    const matched = new Set();
     // Update results for map
-    const matched = allRoutes.filter(item => {
-      return Object.entries(item).some(([key, value]) => {
-        if (key === "platform") return false;
-        if (Array.isArray(value)) {
-          return value.some(v => v.name?.toLowerCase().includes(q) || v.nameKannada?.toLowerCase().includes(q));
-        }
-        return String(value).toLowerCase().includes(q);
-      });
-    });
-    setResults(matched);
+    // const matched = allRoutes.filter(item => {
+    //   return Object.entries(item).some(([key, value]) => {
+    //     if (key === "platform") return false;
+    //     if (Array.isArray(value)) {
+    //       return value.some(v => v.name?.toLowerCase().includes(q) || v.nameKannada?.toLowerCase().includes(q));
+    //     }
+    //     return String(value).toLowerCase().includes(q);
+    //   });
+    // });
+    // setResults(matched);
     const areaViaSet = new Map<string, {type: string, display: string, displayKannada: string, value: string}>();
     const stopSet = new Map<string, {display: string, displayKannada: string, value: string}>();
     const routeSet = new Map<string, {display: string, value: string}>();
+    const platformSet = new Map<string, {type: string, display: string, value: string}>
     for (const route of allRoutes) {
+      if (route.platformNumber)
+        if (route.platformNumber.toLowerCase().includes(q)) {
+          platformSet.set(route.platformNumber, {type: 'Platform', display: route.platformNumber, value: route.platformNumber});
+          matched.add(route);
+        }
       // Area
       if (route.area) {
         if (
@@ -111,6 +130,7 @@
         ) {
           if (route.area.name) {
             areaViaSet.set(route.area.name, {type: 'Area', display: route.area.name, displayKannada: route.area.nameKannada || '', value: route.area.name});
+            matched.add(route);
           }
         }
       }
@@ -123,7 +143,8 @@
               (v.nameKannada && v.nameKannada.toLowerCase().includes(q))
             ) {
               if (v.name) {
-                areaViaSet.set(v.name, {type: 'Via', display: v.name, displayKannada: v.nameKannada || '', value: v.name});
+                areaViaSet.set(v.name, {type: 'Area', display: v.name, displayKannada: v.nameKannada || '', value: v.name});
+                matched.add(route);
               }
             }
           }
@@ -132,19 +153,24 @@
           (route.via.nameKannada && route.via.nameKannada.toLowerCase().includes(q))
         ) {
           if (route.via.name) {
-            areaViaSet.set(route.via.name, {type: 'Via', display: route.via.name, displayKannada: route.via.nameKannada || '', value: route.via.name});
+            areaViaSet.set(route.via.name, {type: 'Area', display: route.via.name, displayKannada: route.via.nameKannada || '', value: route.via.name});
+            matched.add(route);
           }
         }
       }
       // Stops
       if (route.stops && Array.isArray(route.stops)) {
         for (const s of route.stops) {
+          if(s.name && s.name == "Kempegowda Bus Station" || s.name == "Kempegowda Bus Stand") {
+            continue;
+          }
           if (
             (s.name && s.name.toLowerCase().includes(q)) ||
             (s.nameKannada && s.nameKannada.toLowerCase().includes(q))
           ) {
             if (s.name) {
               stopSet.set(s.name, {display: s.name, displayKannada: s.nameKannada || '', value: s.name});
+              matched.add(route);
             }
           }
         }
@@ -153,22 +179,28 @@
       if (route.number && route.number.toLowerCase().includes(q)) {
         if (route.number) {
           routeSet.set(route.number, {display: route.number, value: route.number});
+          matched.add(route);
         }
       }
     }
     suggestions = [
+      ...Array.from(platformSet.values()),
       ...Array.from(areaViaSet.values()),
       ...Array.from(routeSet.entries()).map(([r, obj]) => ({ type: 'Route', value: obj.value, display: obj.display })),
       ...Array.from(stopSet.values()).map(obj => ({ type: 'Stop', value: obj.value, display: obj.display, displayKannada: obj.displayKannada }))
     ];
-    console.log(suggestions);
+    setResults(Array.from(matched));
+  } else {
+    setResults(get(routes));
   }
 </script>
 
-<!-- Back button row (only when search is active) -->
-{#if searchFocused || voiceSearchActive}
+<!-- Back button row (when search is active, sheet/sidebar is open, or showBackButton is true) -->
+{#if showBackButton}
   <div class="cupertino-back-row">
-    <button class="cupertino-back-text" on:click={handleBack} aria-label="Back">&lt; Back</button>
+    <button class="cupertino-back-text" on:click={handleBack} aria-label="Back">
+      <span class="material-icons" aria-hidden="true">chevron_left</span>Back
+    </button>
   </div>
 {/if}
 
@@ -182,12 +214,12 @@
         class="cupertino-input"
         type="text"
         placeholder="Search by bus number or destination..."
-        bind:value={search}
+        bind:value={$search}
         autofocus={searchFocused || voiceSearchActive}
         on:focus={() => searchFocused = true}
         autocomplete="off"
       />
-      {#if search}
+      {#if $search}
         <button class="material-icons cupertino-clear" type="button" on:click={clearSearch} aria-label="Clear">close</button>
       {/if}
       {#if speechSupported}
@@ -197,8 +229,8 @@
   </div>
 </div>
 
-{#if (searchFocused || voiceSearchActive) && search && suggestions.length > 0}
-  <Dropdown bind:this={dropdownRef} {suggestions} {search} onSelect={handleSelectSuggestion} />
+{#if (searchFocused || voiceSearchActive) && $search && suggestions.length > 0}
+  <Dropdown bind:this={dropdownRef} {suggestions} {$search} onSelect={handleSelectSuggestion} />
 {/if}
 
 <style>
@@ -222,9 +254,17 @@
   transition: background 0.15s;
   outline: none;
   text-align: left;
+  display: flex;
+  align-items: center;
 }
 .cupertino-back-text:active {
   background: #e5e5ea;
+}
+.cupertino-back-text .material-icons {
+  font-size: 28px;
+  margin-right: 2px;
+  vertical-align: middle;
+  line-height: 1;
 }
 .cupertino-bar-row {
   display: flex;
@@ -233,6 +273,7 @@
   gap: 0.5rem;
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 .cupertino-bar-flex {
   flex: 1 1 0%;
@@ -251,7 +292,7 @@
   font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
   transition: box-shadow 0.2s, background 0.2s;
   position: relative;
-  z-index: 2;
+  z-index: 100;
 }
 
 .cupertino-search-icon {

@@ -2043,6 +2043,11 @@ cssesc@^3.0.0:
   resolved "https://registry.yarnpkg.com/cssesc/-/cssesc-3.0.0.tgz#37741919903b868565e1c09ea747445cd18983ee"
   integrity sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==
 
+cupertino-pane@^1.4.22:
+  version "1.4.22"
+  resolved "https://registry.yarnpkg.com/cupertino-pane/-/cupertino-pane-1.4.22.tgz#f578a3fad22e2e1fc7ca1256f5493ec3479b639f"
+  integrity sha512-tXAPAetECWcuzXbgFt2vaFViEXSTcjJkKmCpphRcf4ADRf2fDBrEEGqQ5RAqGs7Hsp3TYWqajAm62s7WC9jBTQ==
+
 data-view-buffer@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/data-view-buffer/-/data-view-buffer-1.0.2.tgz#211a03ba95ecaf7798a8c7198d79536211f88570"

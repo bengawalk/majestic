@@ -1,12 +1,11 @@
 import type { Area } from './Area';
 import type { Stop } from './Stop';
-import type { Via } from './Via';
 
 export interface Route {
   number: string;
   area: Area;
   stops: Stop[];
-  via: Via;
+  via: Area;
   destination: string;
   kannadaDestination?: string;
   platformNumber: string;
@@ -16,7 +15,7 @@ export interface Route {
 export class Route {
   number: string;
   area: Area;
-  via: Via;
+  via: Area;
   stops: Stop[];
   destination: string;
   kannadaDestination?: string;
@@ -34,7 +33,7 @@ export class Route {
     number: string;
     area: Area;
     stops: Stop[];
-    via: Via;
+    via: Area;
     destination: string;
     kannadaDestination?: string;
     platformNumber: string;

@@ -14,7 +14,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
   position: relative;
   padding-left: 24px;
   padding-right: 24px;

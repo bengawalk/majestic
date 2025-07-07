@@ -1,19 +1,21 @@
 <script lang="ts">
   import { createEventDispatcher, onMount, tick } from 'svelte';
   import RouteView from './routeview.svelte';
-  export let selectedItem: any = null;
+  import StopView from './stopview.svelte';
+  import { search } from '$lib/stores/search'; // adjust path if needed
+  import { selectedItem } from '$lib/stores/selectedItem';
   const dispatch = createEventDispatcher();
   let isWide = false;
   let paneInstance = null;
   let paneContentEl: HTMLDivElement | null = null;
 
   function checkWide() {
-    isWide = window.innerWidth >= 500;
+    isWide = window.innerWidth >= 600;
   }
 
   async function openPane() {
-    if (!paneContentEl || isWide || !selectedItem) {
-      console.log("CANCEL OPENING PANE");
+    await tick();
+    if (!paneContentEl || isWide || !$selectedItem) {
       return;
     }
     const { CupertinoPane } = await import('cupertino-pane');
@@ -21,25 +23,20 @@
       paneInstance.destroy();
       paneInstance = null;
     }
-    // Calculate content height
-    await tick();
-    let contentHeight = paneContentEl.firstElementChild?.scrollHeight || 220;
-    let maxHeight = window.innerHeight;
     paneInstance = new CupertinoPane(paneContentEl, {
       parentElement: 'body',
       breaks: {
-        top: { enabled: true, height: Math.min(contentHeight + 40, maxHeight), bounce: true },
-        middle: { enabled: false },
-        bottom: { enabled: false }
+        top: { enabled: true, height:  Math.floor(window.innerHeight * 0.95), bounce: true },
+        middle: { enabled: true, height: Math.floor(window.innerHeight * 0.5), bounce: true },
+        bottom: { enabled: false, height: Math.floor(window.innerHeight * 0.2), bounce: true }
       },
-      initialBreak: 'top',
-      backdrop: true, // No gray-out
-      darkMode: false,
+      initialBreak: 'middle',
+      backdrop: false,
       buttonDestroy: false,
-      onWillDismiss: () => { dispatch('close'); },
-      onDidDismiss: () => { dispatch('close'); },
+      bottomClose: false,
     });
     paneInstance.present();
+    paneInstance.paneEl.style.zIndex = '1000'
   }
 
   function close() {
@@ -49,6 +46,8 @@
       paneInstance.destroy();
       paneInstance = null;
     }
+    search.set('');
+    selectedItem.set(undefined);
   }
 
   onMount(() => {
@@ -60,45 +59,56 @@
     };
   });
 
-  $: if (!isWide && selectedItem) {
-    console.log("Attempting to open pane");
-    openPane();
-  }
-  $: if (!selectedItem && paneInstance) {
-    console.log("Destroying pane");
+  $: if (isWide && paneInstance || paneInstance && !$selectedItem) {
     paneInstance.destroy();
+
     paneInstance = null;
+  }
+
+  $: if (!isWide && selectedItem) {
+    tick().then(() => {
+      if (paneContentEl) {
+        // if (paneInstance) {
+        //   paneInstance.destroy();
+        //   paneInstance = null;
+        // }
+        openPane();
+      }
+    });
   }
 </script>
 
-{#if selectedItem}
+{#if $selectedItem}
   {#if isWide}
     <div class="sheet-container is-wide sheet-open" role="dialog" aria-modal="true">
       <div class="sheet-content">
         <button class="sheet-close" aria-label="Close" on:click={close}>&times;</button>
-        {#if selectedItem.type === 'Route'}
-          <RouteView route={selectedItem} platformColor={selectedItem.platformColor || '#888'} />
+        {#if $selectedItem.type === 'Route'}
+          <RouteView route={$selectedItem} />
+        {:else if $selectedItem.type === 'Stop' || $selectedItem.type === 'Area' || $selectedItem.type === 'Platform'}
+          <StopView selectedItem={$selectedItem} />
         {:else}
-          <h2>{selectedItem.display}</h2>
-          {#if selectedItem.displayKannada}
-            <div class="sheet-kannada">{selectedItem.displayKannada}</div>
+          <h2>{$selectedItem.display}</h2>
+          {#if $selectedItem.displayKannada}
+            <div class="sheet-secondary">{$selectedItem.displayKannada}</div>
           {/if}
-          <div class="sheet-type">Type: {selectedItem.type}</div>
         {/if}
       </div>
     </div>
   {:else}
-    <div bind:this={paneContentEl} style="display:none">
+    <div class="sheet-container sheet-open" bind:this={paneContentEl}>
+      <div class="grabber"></div>
       <div class="sheet-content">
         <button class="sheet-close" aria-label="Close" on:click={close}>&times;</button>
-        {#if selectedItem.type === 'Route'}
-          <RouteView route={selectedItem} platformColor={selectedItem.platformColor || '#888'} />
+        {#if $selectedItem.type === 'Route'}
+          <RouteView route={$selectedItem} />
+        {:else if $selectedItem.type === 'Stop' || $selectedItem.type === 'Area' || $selectedItem.type === 'Platform'}
+          <StopView selectedItem={$selectedItem} />
         {:else}
-          <h2>{selectedItem.display}</h2>
-          {#if selectedItem.displayKannada}
-            <div class="sheet-kannada">{selectedItem.displayKannada}</div>
+          <h2>{$selectedItem.display}</h2>
+          {#if $selectedItem.displayKannada}
+            <div class="sheet-secondary">{$selectedItem.displayKannada}</div>
           {/if}
-          <div class="sheet-type">Type: {selectedItem.type}</div>
         {/if}
       </div>
     </div>
@@ -109,7 +119,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 .sheet-container {
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   left: 0;
   right: 0;
   bottom: 0;
@@ -138,7 +148,7 @@
   right: 18px;
   top: 18px;
   font-size: 28px;
-  background: linear-gradient(0deg, rgba(61, 61, 61, 0.5), rgba(61, 61, 61, 0.5)), rgba(127, 127, 127, 0.2);
+  /*background: linear-gradient(0deg, rgba(61, 61, 61, 0.5), rgba(61, 61, 61, 0.5)), rgba(127, 127, 127, 0.2);*/
   background-blend-mode: overlay, luminosity;
   border-radius: 1000px;
   border: none;
@@ -151,7 +161,7 @@
   align-items: center;
   justify-content: center;
 }
-.sheet-kannada {
+.sheet-secondary {
   font-size: 18px;
   color: #888;
   margin-bottom: 12px;
@@ -162,8 +172,9 @@
 }
 .sheet-open {
   transform: translateY(0);
+  z-index: 100;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .sheet-container {
     left: 0;
     right: auto;

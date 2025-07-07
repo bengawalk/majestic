@@ -1,17 +1,15 @@
 <script lang="ts">
     import maplibregl from 'maplibre-gl';
     import 'maplibre-gl/dist/maplibre-gl.css';
-    import { onMount } from 'svelte';
+    import {onMount, tick} from 'svelte';
     import { setPlatforms } from '$lib/stores/platforms';
     import { setRoutes } from '$lib/stores/routes';
     import { results } from '$lib/stores/results';
     import { get } from 'svelte/store';
-    import type { Route } from '$lib/types/Route';
-    import type { Area } from '$lib/types/Area';
-    import type { Stop } from '$lib/types/Stop';
-    import type { Via } from '$lib/types/Via';
+    import { Platform } from '$lib/types/Platform';
+    import {previousSelectedItem, selectedItem} from '$lib/stores/selectedItem';
 
-    const MAJESTIC_CENTER: maplibregl.LngLatLike = [77.5707, 12.9784]; // [lng, lat]
+    const MAJESTIC_CENTER: maplibregl.LngLatLike = [77.5724549, 12.9772291]; // [lng, lat]
 
     // // Raster overlay boundaries
     // let overlayBounds = [
@@ -41,8 +39,6 @@
         // Use the global search value to determine if a search is active
         const currentResults = get(results);
         const resultRouteIds = new Set(currentResults ? currentResults.map(r => r.number) : []);
-        console.log(resultRouteIds);
-        console.log(currentResults);
         // Clone the geojson
         const updated = JSON.parse(JSON.stringify(platformsGeoJson));
         for (const feature of updated.features) {
@@ -87,16 +83,28 @@
                 ]
             },
             center: MAJESTIC_CENTER,
-            zoom: 17
+            zoom: 16.8,
+            dragRotate: false,
+            bearing: 0,
+            pitch: 0,
+            maxPitch: 0,
+            minPitch: 0
         });
         // Subscribe to results and update platform colors on change
         const unsub = results.subscribe(() => {
             if (map && platformsGeoJson) {
                 updatePlatformColors();
-            } else {
-                console.log("SFDSAF");
             }
         });
+        // Prevent rotation and pitch changes
+        map.on('rotate', () => {
+            map.setBearing(0);
+        });
+        
+        map.on('pitch', () => {
+            map.setPitch(0);
+        });
+        
         map.on('load', () => {
             // map.addSource('majestic-overlay', {
             //     type: 'image',
@@ -119,40 +127,36 @@
                 .then(data => {
                     if(!map) return;
                     platformsGeoJson = data;
-                    // Store platforms
-                    const platformsArr = data.features || [];
+                    // Store platforms as Platform class instances
+                    const platformsArr = (data.features || []).map(feature => {
+                        const platformNumber = feature.properties?.Platform?.toString().toUpperCase() || '';
+                        const color = feature.properties?.Color || '#FFFFFF';
+                        const routes = (feature.properties?.Routes || []).map(route => {
+                            // Convert stops
+                            const stops = (route.Stops || []).map((s) => ({ name: s, nameKannada: "" }));
+                            // Convert via
+                            const via = { name: route.Via, nameKannada: route.KannadaVia };
+                            // Convert area
+                            const area = { name: route.Area, nameKannada: route.KannadaArea };
+                            return {
+                                number: route.Route,
+                                area,
+                                stops,
+                                via,
+                                destination: route.Destination,
+                                kannadaDestination: route.KannadaDestination,
+                                platformNumber: route.PlatformNumber.toUpperCase()
+                            };
+                        });
+                        return new Platform({ platformNumber, color, routes });
+                    });
                     setPlatforms(platformsArr);
 
                     // Flatten all routes from all platforms, convert to Route types
-                    const allRoutes: Route[] = [];
+                    const allRoutes = [];
                     for (const platform of platformsArr) {
-                        if (platform.properties && Array.isArray(platform.properties.Routes)) {
-                            for (const route of platform.properties.Routes) {
-                                // Convert stops
-                                const stops: Stop[] = (route.Stops || []).map((s: any) => ({
-                                    name: s,
-                                    nameKannada: ""
-                                }));
-                                // Convert via
-                                const via: Via = {
-                                    name: route.Via,
-                                    nameKannada: route.KannadaVia
-                                };
-                                // Convert area
-                                const area: Area = {
-                                    name: route.Area,
-                                    nameKannada: route.KannadaArea
-                                }
-                                allRoutes.push({
-                                    number: route.Route,
-                                    area,
-                                    stops,
-                                    via,
-                                    destination: route.Destination,
-                                    kannadaDestination: route.KannadaDestination,
-                                    platformNumber: route.PlatformNumber
-                                });
-                            }
+                        for (const route of platform.routes) {
+                            allRoutes.push(route);
                         }
                     }
                     setRoutes(allRoutes);
@@ -189,6 +193,19 @@
                         paint: {
                             'text-color': '#fff',
                             'text-halo-width': 0
+                        }
+                    });
+
+                    // Add click listener for platform features
+                    map.on('click', (e) => {
+                        const features = map.queryRenderedFeatures(e.point, { layers: ['platform-circles'] });
+                        if (features && features.length > 0) {
+                            const feature = features[0];
+                            if (feature && feature.properties && feature.properties.Platform) {
+                                selectedItem.set(undefined);
+                                previousSelectedItem.set(undefined);
+                                tick().then( () => selectedItem.set({ type: 'Platform', display: feature.properties.Platform }) );
+                            }
                         }
                     });
                 });

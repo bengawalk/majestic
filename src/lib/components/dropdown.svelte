@@ -1,7 +1,13 @@
 <script lang="ts">
+  import {search} from "$lib/stores/search";
+  import {previousSelectedItem, selectedItem} from "$lib/stores/selectedItem";
+
   export let suggestions: { type: string; value: string; display: string; displayKannada?: string; }[] = [];
-  export let search: string = '';
-  export let onSelect: (s: any) => void = () => {};
+  export let onSelect: (s: any) => void = (s) => {
+    previousSelectedItem.set(undefined);
+    selectedItem.set(undefined);
+    selectedItem.set(s);
+  };
 
   // Expose a method to select the first suggestion
   export function selectFirst() {
@@ -17,46 +23,45 @@
     return '';
   }
 
-  function highlightMatch(text: string, query: string) {
-    if (!text || !query) return text;
+  function highlightSegments(text: string, query: string) {
+    if (!text || !query) return [{ text, highlight: false }];
     const idx = text.toLowerCase().indexOf(query.toLowerCase());
-    if (idx === -1) return text;
-    console.log([
-      text.slice(0, idx),
-      '<b>',
-      text.slice(idx, idx + query.length),
-      '</b>',
-      text.slice(idx + query.length)
-    ].join(''))
+    if (idx === -1) return [{ text, highlight: false }];
     return [
-      text.slice(0, idx),
-      '<b>',
-      text.slice(idx, idx + query.length),
-      '</b>',
-      text.slice(idx + query.length)
-    ].join('');
+      { text: text.slice(0, idx), highlight: false },
+      { text: text.slice(idx, idx + query.length), highlight: true },
+      { text: text.slice(idx + query.length), highlight: false }
+    ];
   }
 </script>
 
 {#if suggestions.length > 0}
   <div class="cupertino-suggestions-dropdown" role="listbox">
     {#each suggestions as s, i (s.type + '-' + (s.value ?? s.display ?? s.displayKannada ?? i))}
-      <div
+      <button
+        type="button"
         class="cupertino-suggestion-item"
         role="option"
         aria-label={(s.displayKannada ? `${s.display}, ${s.displayKannada}` : s.display) }
-        tabindex="0"
         on:click={() => onSelect(s)}
       >
         <span class="cupertino-suggestion-prefix">{getPrefix(s.type)}</span>
         <span class="cupertino-suggestion-labels">
-          {#if search && s.display && s.display.toLowerCase().includes(search.trim().toLowerCase())}
-            <span class="cupertino-suggestion-main">{@html highlightMatch(s.display, search)}</span>
+          {#if $search && s.display && s.display.toLowerCase().includes($search.trim().toLowerCase())}
+            <span class="cupertino-suggestion-main">
+              {#each highlightSegments(s.display, $search) as seg}
+                {#if seg.highlight}<b>{seg.text}</b>{:else}{seg.text}{/if}
+              {/each}
+            </span>
             {#if s.displayKannada}
               <span class="cupertino-suggestion-secondary">{s.displayKannada}</span>
             {/if}
-          {:else if search && s.displayKannada && s.displayKannada.toLowerCase().includes(search.trim().toLowerCase())}
-            <span class="cupertino-suggestion-main">{@html highlightMatch(s.displayKannada, search)}</span>
+          {:else if $search && s.displayKannada && s.displayKannada.toLowerCase().includes($search.trim().toLowerCase())}
+            <span class="cupertino-suggestion-main">
+              {#each highlightSegments(s.displayKannada, $search) as seg}
+                {#if seg.highlight}<b>{seg.text}</b>{:else}{seg.text}{/if}
+              {/each}
+            </span>
             {#if s.display}
               <span class="cupertino-suggestion-secondary">{s.display}</span>
             {/if}
@@ -65,11 +70,11 @@
               <span class="cupertino-suggestion-main">{s.display}</span>
             {/if}
             {#if s.displayKannada}
-<!--              <span class="cupertino-suggestion-secondary">{s.displayKannada}</span>-->
+              <span class="cupertino-suggestion-secondary">{s.displayKannada}</span>
             {/if}
           {/if}
         </span>
-      </div>
+      </button>
     {/each}
   </div>
 {/if}
@@ -84,7 +89,7 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 16px 0 rgba(60,60,67,0.10);
-  z-index: 20;
+  z-index: 200;
   padding: 8px 0;
   max-height: 260px;
   overflow-y: auto;
@@ -101,6 +106,10 @@
   gap: 8px;
   min-height: 48px;
   flex-direction: row;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
 }
 .cupertino-suggestion-item:hover, .cupertino-suggestion-item:focus {
   background: #f1f1f3;
