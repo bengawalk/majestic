@@ -203,10 +203,14 @@
         areaViaSet.delete(stopName);
       }
     }
+    // Sort route suggestions by shortest display
+    const sortedRouteSuggestions = Array.from(routeSet.entries())
+      .map(([r, obj]) => ({ type: 'Route', value: obj.value, display: obj.display }))
+      .sort((a, b) => a.display.length - b.display.length);
     suggestions = [
+      ...sortedRouteSuggestions,
       ...Array.from(stopSet.values()).map(obj => ({ type: 'Stop', value: obj.value, display: obj.display, displayKannada: obj.displayKannada })),
       ...Array.from(areaViaSet.values()),
-      ...Array.from(routeSet.entries()).map(([r, obj]) => ({ type: 'Route', value: obj.value, display: obj.display })),
     ];
     setResults(Array.from(matched));
     // Automatically select first suggestion for voice search

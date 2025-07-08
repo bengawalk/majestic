@@ -263,11 +263,11 @@
                     const geolocate = new maplibregl.GeolocateControl({
                         positionOptions: { enableHighAccuracy: true },
                         trackUserLocation: true,
-                        showUserHeading: true,
+                        // showUserHeading: true,
                         showUserLocation: true,
                         showAccuracyCircle: true,
                         fitBoundsOptions: { maxZoom: map.getZoom() }, // Prevent zooming in
-                        flyTo: false // Prevent flying to user location
+                        // flyTo: false // Prevent flying to user location
                     });
                     map.addControl(geolocate);
                     setResults(allRoutes);
@@ -282,11 +282,12 @@
 
                     // Request user location on map load, but do not fly to it
                     if (navigator.geolocation) {
-                        navigator.geolocation.getCurrentPosition(
+                        navigator.geolocation.watchPosition(
                             (pos) => {
                                 // Permission granted, update the geolocate control's marker without flying
                                 // This is a workaround: set the control's _lastKnownPosition and emit the event
                                 if (geolocate._updateMarker) {
+                                    console.log("UPDATING");
                                     geolocate._updateMarker({ coords: pos.coords });
                                 }
                             },
