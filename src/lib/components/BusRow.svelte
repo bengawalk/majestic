@@ -83,7 +83,7 @@
   font-size: 14px;
   font-weight: 400;
   color: #1A1A1A;
-  line-height: 22px;
+  line-height: 12px;
 }
 .busrow-via {
   display: flex;
@@ -92,7 +92,7 @@
   font-family: 'Manrope', sans-serif;
   font-size: 12px;
   color: #585858;
-  line-height: 19px;
+  line-height: 10px;
 }
 .via-label {
   font-weight: 400;
