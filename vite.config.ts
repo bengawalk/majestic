@@ -3,10 +3,19 @@ import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
+import svelteSVG from '@poppanator/sveltekit-svg';
 
 export default defineConfig({
 	plugins: [
 		tailwindcss(),
+		svelteSVG({
+			// Optional: svgo options or default true
+			// svgo: true,
+			// Default: "src/lib/icons"
+			// includePaths: ["src/assets/icons"],
+			// Default: ".svg"
+			// ext: "svg"
+		}),
 		sveltekit(),
 		paraglideVitePlugin({
 			project: './project.inlang',

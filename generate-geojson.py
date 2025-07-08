@@ -5,9 +5,10 @@ from collections import defaultdict
 # File paths
 platform_index_path = 'input/platform-index.csv'
 # bus_routes_path = 'input/bus-routes.csv'
-bus_stops_path = 'input/bus-stops-2.csv'
+bus_stops_path = 'input/bus-stops.csv'
 platforms_geojson_path = 'input/platforms-majestic.geojson'
 output_geojson_path = 'static/data/platforms-routes-majestic.geojson'
+stops_kn = 'input/bus-stops-kn.csv'
 
 # Read platform index
 platform_index = defaultdict(list)
@@ -28,6 +29,16 @@ with open(bus_stops_path, encoding='utf-8') as f:
             # Get all stops from the row (skip empty cells)
             stops = [stop.strip() for stop in row[1:] if stop and stop.strip()]
             bus_stops_by_route[route_number] = stops
+
+# Read Kannada stop names
+stop_kn_lookup = {}
+try:
+    with open('input/bus-stops-kn.csv', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            stop_kn_lookup[row['stop_name']] = row['stop_name_kn']
+except FileNotFoundError:
+    print("WARNING: bus-stops-kn.csv not found. Kannada stop names will be missing.")
 
 # # Read bus routes (keeping for fallback)
 # routes_by_number = defaultdict(list)
@@ -70,11 +81,13 @@ for plat_num, plat_rows in platform_index.items():
             stops_source = "bus-stops.csv"
             if bus_number in bus_stops_by_route:
                 previous = ""
-                # stops = [x for x in bus_stops_by_route[bus_number] if not (x in seen or seen.add(x))]
                 stops = []
                 for x in bus_stops_by_route[bus_number]:
                     if previous != x:
-                        stops.append(x)
+                        stops.append({
+                            'name': x,
+                            'name_kn': stop_kn_lookup.get(x, x)
+                        })
                     else:
                         print(f"Route {bus_number} (Platform {plat_num}): Duplicate stop found, '{x}'")
                     previous = x

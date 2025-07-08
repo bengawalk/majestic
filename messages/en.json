@@ -1,4 +1,12 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from en!"
+	"hello_world": "Hello, {name} from en!",
+	"via": "Via %1",
+	"search": "Search by Bus Number or Destination",
+	"platform": "Platform %1",
+	"buses_to": "Buses To %1",
+	"other_buses_to": "Other buses going to %1 Area",
+	"back": "Back",
+	"header": "Majestic Bus Station",
+	"lan": "ಕನ್ನಡ"
 }

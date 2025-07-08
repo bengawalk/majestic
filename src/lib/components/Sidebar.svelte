@@ -1,7 +1,7 @@
 <script lang="ts">
   import { createEventDispatcher, onMount, tick } from 'svelte';
-  import RouteView from './routeview.svelte';
-  import StopView from './stopview.svelte';
+  import RouteView from './RouteView.svelte';
+  import StopView from './StopView.svelte';
   import { search } from '$lib/stores/search'; // adjust path if needed
   import { selectedItem } from '$lib/stores/selectedItem';
   const dispatch = createEventDispatcher();
@@ -10,7 +10,7 @@
   let paneContentEl: HTMLDivElement | null = null;
 
   function checkWide() {
-    isWide = window.innerWidth >= 600;
+    isWide = window.innerWidth >= 1088;
   }
 
   async function openPane() {
@@ -36,6 +36,7 @@
       bottomClose: false,
     });
     paneInstance.present();
+    paneInstance.paneEl.style.maxWidth = '100%';
     paneInstance.paneEl.style.zIndex = '1000'
   }
 
@@ -129,7 +130,7 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   transition: transform 0.2s cubic-bezier(.4,0,.2,1);
-  max-height: 100vh;
+  max-height: var(--app-height); /* --app-height is set by JS to match the visible viewport height, avoiding browser chrome issues on mobile. */
   min-height: 220px;
   display: flex;
   flex-direction: column;
@@ -174,7 +175,7 @@
   transform: translateY(0);
   z-index: 100;
 }
-@media (min-width: 600px) {
+@media (min-width: 1088px) {
   .sheet-container {
     left: 0;
     right: auto;
@@ -182,7 +183,7 @@
     bottom: 0;
     width: 380px;
     max-width: 100vw;
-    min-height: 100vh;
+    min-height: var(--app-height);
     border-radius: 0;
     box-shadow: 2px 0 24px rgba(0,0,0,0.08), 0px 0px 4px rgba(0,0,0,0.25);
     background: #f5f5f7;

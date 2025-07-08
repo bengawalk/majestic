@@ -3,9 +3,12 @@
   import { setResults } from '$lib/stores/results';
   import { get } from 'svelte/store';
   import {createEventDispatcher, onMount, tick} from 'svelte';
-  import Dropdown from './dropdown.svelte';
+  import Dropdown from './Dropdown.svelte';
   import { search } from '$lib/stores/search';
   import {previousSelectedItem} from "$lib/stores/selectedItem";
+  import LanguageSwitcher from "$lib/components/LanguageSwitcher.svelte";
+  import {messages} from "$lib/stores/messages";
+  import Fuse from 'fuse.js';
 
   export let searchFocused: boolean;
   export let searchInput: HTMLInputElement | null = null;
@@ -16,6 +19,7 @@
   let speechSupported = false;
   let recognizing = false;
   let recognition: SpeechRecognition | null = null;
+  let lastVoiceSearch = false;
 
   const dispatch = createEventDispatcher();
 
@@ -35,6 +39,7 @@
       recognition.onresult = (event: any) => {
         if (event.results && event.results[0] && event.results[0][0]) {
           search.set(event.results[0][0].transcript);
+          lastVoiceSearch = true;
           setTimeout(() => {
             if (dropdownRef && typeof dropdownRef.selectFirst === 'function') {
               dropdownRef.selectFirst();
@@ -101,27 +106,36 @@
     const q = $search.trim().toLowerCase();
     const allRoutes = get(routes);
     const matched = new Set();
-    // Update results for map
-    // const matched = allRoutes.filter(item => {
-    //   return Object.entries(item).some(([key, value]) => {
-    //     if (key === "platform") return false;
-    //     if (Array.isArray(value)) {
-    //       return value.some(v => v.name?.toLowerCase().includes(q) || v.nameKannada?.toLowerCase().includes(q));
-    //     }
-    //     return String(value).toLowerCase().includes(q);
-    //   });
-    // });
-    // setResults(matched);
     const areaViaSet = new Map<string, {type: string, display: string, displayKannada: string, value: string}>();
     const stopSet = new Map<string, {display: string, displayKannada: string, value: string}>();
     const routeSet = new Map<string, {display: string, value: string}>();
-    // const platformSet = new Map<string, {type: string, display: string, value: string}>
-    for (const route of allRoutes) {
-      // if (route.platformNumber)
-        // if (route.platformNumber.toLowerCase().includes(q)) {
-        //   platformSet.set(route.platformNumber, {type: 'Platform', display: `Platform ${route.platformNumber}`, value: route.platformNumber});
-        //   matched.add(route);
-        // }
+
+    // Use fuzzy search only if lastVoiceSearch is true
+    let filteredRoutes = allRoutes;
+    let didVoiceSelect = false;
+    if (lastVoiceSearch) {
+      const fuse = new Fuse(allRoutes, {
+        keys: [
+          'number',
+          'destination',
+          'kannadaDestination',
+          'area.name',
+          'area.nameKannada',
+          'via.name',
+          'via.nameKannada',
+          'stops.name',
+          'stops.nameKannada'
+        ],
+        threshold: 0.4
+      });
+      filteredRoutes = fuse.search(q).map(r => r.item);
+      lastVoiceSearch = false;
+      didVoiceSelect = true;
+    } else {
+      filteredRoutes = allRoutes;
+    }
+
+    for (const route of filteredRoutes) {
       // Area
       if (route.area) {
         if (
@@ -183,13 +197,26 @@
         }
       }
     }
+    // Remove areaViaSet entries that are also in stopSet
+    for (const stopName of stopSet.keys()) {
+      if (areaViaSet.has(stopName)) {
+        areaViaSet.delete(stopName);
+      }
+    }
     suggestions = [
       ...Array.from(stopSet.values()).map(obj => ({ type: 'Stop', value: obj.value, display: obj.display, displayKannada: obj.displayKannada })),
       ...Array.from(areaViaSet.values()),
-      // ...Array.from(platformSet.values()),
       ...Array.from(routeSet.entries()).map(([r, obj]) => ({ type: 'Route', value: obj.value, display: obj.display })),
     ];
     setResults(Array.from(matched));
+    // Automatically select first suggestion for voice search
+    if (didVoiceSelect && suggestions.length > 0) {
+      tick().then(() => {
+        if (dropdownRef && typeof dropdownRef.selectFirst === 'function') {
+          dropdownRef.selectFirst();
+        }
+      });
+    }
   } else {
     setResults(get(routes));
   }
@@ -199,8 +226,11 @@
 {#if showBackButton}
   <div class="cupertino-back-row">
     <button class="cupertino-back-text" on:click={handleBack} aria-label="Back">
-      <span class="material-icons" aria-hidden="true">chevron_left</span>Back
+      <span class="material-icons" aria-hidden="true">chevron_left</span>{$messages.back()}
     </button>
+    <div class="language-switcher">
+      <LanguageSwitcher />
+    </div>
   </div>
 {/if}
 
@@ -213,7 +243,7 @@
         bind:this={searchInput}
         class="cupertino-input"
         type="text"
-        placeholder="Search by bus number or destination..."
+        placeholder={$messages.search()}
         bind:value={$search}
         autofocus={searchFocused || voiceSearchActive}
         on:focus={() => searchFocused = true}
@@ -278,6 +308,11 @@
 .cupertino-bar-flex {
   flex: 1 1 0%;
   display: flex;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.language-switcher {
+  margin-left: auto;
 }
 .cupertino-searchbar {
   display: flex;

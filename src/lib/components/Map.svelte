@@ -4,7 +4,7 @@
     import {onMount, tick} from 'svelte';
     import { setPlatforms } from '$lib/stores/platforms';
     import { setRoutes } from '$lib/stores/routes';
-    import { results } from '$lib/stores/results';
+    import {results, setResults} from '$lib/stores/results';
     import { get } from 'svelte/store';
     import { Platform } from '$lib/types/Platform';
     import {previousSelectedItem, selectedItem} from '$lib/stores/selectedItem';
@@ -47,9 +47,10 @@
                 feature.properties.OriginalColor = feature.properties.Color;
             }
             const platformRoutes = (feature.properties && Array.isArray(feature.properties.Routes)) ? feature.properties.Routes : [];
-            let hasMatch = true;
-            hasMatch = !platformRoutes.some((route) => Object.hasOwn(route, 'Route') && resultRouteIds.has(route.Route));
-            feature.properties.Color = hasMatch ? '#D2D2D2' : feature.properties.OriginalColor || feature.properties.Color;
+            // isGray: true if no route matches
+            const isGray = !platformRoutes.some((route) => Object.hasOwn(route, 'Route') && resultRouteIds.has(route.Route));
+            feature.properties.isGray = isGray;
+            feature.properties.Color = isGray ? '#D2D2D2' : feature.properties.OriginalColor || feature.properties.Color;
         }
         // Update the map source
         if (map.getSource('platforms')) {
@@ -126,6 +127,14 @@
                 .then(r => r.json())
                 .then(data => {
                     if(!map) return;
+                    // Set isGray property for all features initially
+                    const currentResults = get(results);
+                    const resultRouteIds = new Set(currentResults ? currentResults.map(r => r.number) : []);
+                    for (const feature of data.features) {
+                        const platformRoutes = (feature.properties && Array.isArray(feature.properties.Routes)) ? feature.properties.Routes : [];
+                        const isGray = !platformRoutes.some((route) => Object.hasOwn(route, 'Route') && resultRouteIds.has(route.Route));
+                        feature.properties.isGray = isGray;
+                    }
                     platformsGeoJson = data;
                     // Store platforms as Platform class instances
                     const platformsArr = (data.features || []).map(feature => {
@@ -133,7 +142,7 @@
                         const color = feature.properties?.Color || '#FFFFFF';
                         const routes = (feature.properties?.Routes || []).map(route => {
                             // Convert stops
-                            const stops = (route.Stops || []).map((s) => ({ name: s, nameKannada: "" }));
+                            const stops = (route.Stops || []).map((s) => ({ name: s.name, nameKannada: s.name_kn}));
                             // Convert via
                             const via = { name: route.Via, nameKannada: route.KannadaVia };
                             // Convert area
@@ -165,23 +174,23 @@
                         type: 'geojson',
                         data
                     });
+                    // Add gray platforms layer (bottom)
                     map.addLayer({
-                        id: 'platform-circles',
+                        id: 'platform-circles-gray',
                         type: 'circle',
                         source: 'platforms',
+                        filter: ['==', ['get', 'isGray'], true],
                         paint: {
                             'circle-radius': 16,
-                            'circle-color': [
-                                'coalesce',
-                                ['get', 'Color'],
-                                '#FFFFFF'
-                            ]
+                            'circle-color': '#D2D2D2'
                         }
                     });
+                    // Add gray platform labels (just above gray circles)
                     map.addLayer({
-                        id: 'platform-labels',
+                        id: 'platform-labels-gray',
                         type: 'symbol',
                         source: 'platforms',
+                        filter: ['==', ['get', 'isGray'], true],
                         layout: {
                             'text-field': ['get', 'Platform'],
                             'text-size': 16,
@@ -195,10 +204,51 @@
                             'text-halo-width': 0
                         }
                     });
+                    // Add colored platforms layer (top)
+                    map.addLayer({
+                        id: 'platform-circles-colored',
+                        type: 'circle',
+                        source: 'platforms',
+                        filter: ['==', ['get', 'isGray'], false],
+                        paint: {
+                            'circle-radius': 16,
+                            'circle-color': [
+                                'coalesce',
+                                ['get', 'Color'],
+                                '#FFFFFF'
+                            ]
+                        }
+                    });
+                    // Add colored platform labels (just above colored circles)
+                    map.addLayer({
+                        id: 'platform-labels-colored',
+                        type: 'symbol',
+                        source: 'platforms',
+                        filter: ['==', ['get', 'isGray'], false],
+                        layout: {
+                            'text-field': ['get', 'Platform'],
+                            'text-size': 16,
+                            'text-font': ['Manrope SemiBold'],
+                            'text-offset': [0, 0],
+                            'text-anchor': 'center',
+                            'text-allow-overlap': true
+                        },
+                        paint: {
+                            'text-color': '#fff',
+                            'text-halo-width': 0
+                        }
+                    });
+                    // Remove the original single platform-circles and platform-labels layers if present
+                    if (map.getLayer('platform-circles')) {
+                        map.removeLayer('platform-circles');
+                    }
+                    if (map.getLayer('platform-labels')) {
+                        map.removeLayer('platform-labels');
+                    }
 
                     // Add click listener for platform features
                     map.on('click', (e) => {
-                        const features = map.queryRenderedFeatures(e.point, { layers: ['platform-circles'] });
+                        const features = map.queryRenderedFeatures(e.point, { layers: ['platform-circles-gray', 'platform-circles-colored'] });
                         if (features && features.length > 0) {
                             const feature = features[0];
                             if (feature && feature.properties && feature.properties.Platform) {
@@ -220,7 +270,8 @@
                         flyTo: false // Prevent flying to user location
                     });
                     map.addControl(geolocate);
-
+                    setResults(allRoutes);
+                    updatePlatformColors();
                     // Hide the geolocate control button via CSS
                     map.once('render', () => {
                         const controls = document.getElementsByClassName('maplibregl-ctrl-geolocate');

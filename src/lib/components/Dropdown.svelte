@@ -1,6 +1,8 @@
 <script lang="ts">
   import {search} from "$lib/stores/search";
   import {previousSelectedItem, selectedItem} from "$lib/stores/selectedItem";
+  import RouteIcon from "../../assets/icons/route.svg";
+  import BusModal from "$lib/components/BusModal.svelte";
 
   export let suggestions: { type: string; value: string; display: string; displayKannada?: string; }[] = [];
   export let onSelect: (s: any) => void = (s) => {
@@ -14,14 +16,6 @@
     if (suggestions.length > 0) {
       onSelect(suggestions[0]);
     }
-  }
-
-  function getPrefix(type: string) {
-    if (type === 'Area' || type === 'Via') return '+';
-    if (type === 'Stop') return '-';
-    if (type === 'Route') return '=';
-    if (type === 'Platform') return '#';
-    return '';
   }
 
   function highlightSegments(text: string, query: string) {
@@ -46,7 +40,11 @@
         aria-label={(s.displayKannada ? `${s.display}, ${s.displayKannada}` : s.display) }
         on:click={() => onSelect(s)}
       >
-        <span class="cupertino-suggestion-prefix">{getPrefix(s.type)}</span>
+        {#if s.type === 'Route'}
+          <div class="cupertino-suggestion-prefix">
+            <BusModal number={s.display} />
+          </div>
+          {:else}
         <span class="cupertino-suggestion-labels">
           {#if $search && s.display && s.display.toLowerCase().includes($search.trim().toLowerCase())}
             <span class="cupertino-suggestion-main">
@@ -54,27 +52,28 @@
                 {#if seg.highlight}<b>{seg.text}</b>{:else}{seg.text}{/if}
               {/each}
             </span>
-            {#if s.displayKannada}
-              <span class="cupertino-suggestion-secondary">{s.displayKannada}</span>
-            {/if}
+            <!--{#if s.displayKannada}-->
+            <!--  <span class="cupertino-suggestion-secondary">{s.displayKannada}</span>-->
+            <!--{/if}-->
           {:else if $search && s.displayKannada && s.displayKannada.toLowerCase().includes($search.trim().toLowerCase())}
             <span class="cupertino-suggestion-main">
               {#each highlightSegments(s.displayKannada, $search) as seg}
                 {#if seg.highlight}<b>{seg.text}</b>{:else}{seg.text}{/if}
               {/each}
             </span>
-            {#if s.display}
-              <span class="cupertino-suggestion-secondary">{s.display}</span>
-            {/if}
+            <!--{#if s.display}-->
+            <!--  <span class="cupertino-suggestion-secondary">{s.display}</span>-->
+            <!--{/if}-->
           {:else}
             {#if s.display}
               <span class="cupertino-suggestion-main">{s.display}</span>
             {/if}
-            {#if s.displayKannada}
-              <span class="cupertino-suggestion-secondary">{s.displayKannada}</span>
-            {/if}
+            <!--{#if s.displayKannada}-->
+            <!--  <span class="cupertino-suggestion-secondary">{s.displayKannada}</span>-->
+            <!--{/if}-->
           {/if}
         </span>
+        {/if}
       </button>
     {/each}
   </div>
@@ -125,6 +124,7 @@
   margin-top: 1px;
 }
 .cupertino-suggestion-main {
+  justify-content: center;
   font-size: 17px;
   margin-top: 2px;
   color: #222;

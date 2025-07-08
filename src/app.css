@@ -3,11 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 
 html, body, #svelte {
-  height: 100dvh;
+  height: var(--app-height) !important;
+  min-height: 0 !important;
+  max-height: var(--app-height) !important;
   margin: 0;
   padding: 0;
-  overflow: visible;
-  /* Safari-specific properties to prevent pull-to-refresh and overscroll */
+  overflow: hidden;
+  /* --app-height is set by JS to match the visible viewport height, avoiding browser chrome issues on mobile. */
   -webkit-overflow-scrolling: touch;
   overscroll-behavior: none;
   touch-action: manipulation;
@@ -16,6 +18,9 @@ html, body, #svelte {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
   width: 100lvw;
-  height: 100dvh;
-  overflow: hidden;
+  height: var(--app-height) !important;
+  min-height: 0 !important;
+  max-height: var(--app-height) !important;
+  height: var(--app-height);
+  /* overflow: hidden; */
 }

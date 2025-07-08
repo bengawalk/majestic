@@ -1,10 +1,11 @@
 <script lang="ts">
-import Map from '$lib/components/map.svelte';
-import Header from '$lib/components/header.svelte';
-import SearchBar from '$lib/components/searchbar.svelte';
+import Map from '$lib/components/Map.svelte';
+import Header from '$lib/components/Header.svelte';
+import Searchbar from '$lib/components/Searchbar.svelte';
 import { onMount, tick } from 'svelte';
-import SidebarSheet from '$lib/components/sidebar.svelte';
+import SidebarSheet from '$lib/components/Sidebar.svelte';
 import {previousSelectedItem, selectedItem} from "$lib/stores/selectedItem";
+import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 
 let search = '';
 let searchFocused = false;
@@ -18,8 +19,14 @@ let overlayRef: HTMLDivElement | null = null;
 // let blurHeight = 110;
 let overlayTop = 16; // px
 
+let windowWidth = typeof window !== 'undefined' ? window.innerWidth : 0;
+
+function handleResize() {
+    windowWidth = window.innerWidth;
+}
+
 // Compute overlay left margin for desktop reactivity
-$: overlayLeft = (typeof window !== 'undefined' && window.innerWidth >= 600 && $selectedItem) ? '180px' : '0';
+$: overlayLeft = (windowWidth >= 1088 && $selectedItem) ? '180px' : '0';
 
 // async function updateBlur() {
 //     await tick();
@@ -27,11 +34,26 @@ $: overlayLeft = (typeof window !== 'undefined' && window.innerWidth >= 600 && $
 //         blurHeight = overlayRef.offsetHeight + 16;
 //     }
 // }
-
+// Set --app-height to the visible viewport height for mobile browser compatibility
+function setAppHeight() {
+    document.documentElement.style.setProperty('--app-height', `${window.innerHeight}px`);
+}
 onMount(() => {
     // updateBlur();
     // window.addEventListener('resize', updateBlur);
     // return () => window.removeEventListener('resize', updateBlur);
+    window.addEventListener('resize', setAppHeight);
+    window.addEventListener('orientationchange', setAppHeight);
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
+    setAppHeight();
+    handleResize();
+    return () => {
+        window.removeEventListener('resize', setAppHeight);
+        window.removeEventListener('orientationchange', setAppHeight);
+        window.removeEventListener('resize', handleResize);
+        window.removeEventListener('orientationchange', handleResize);
+    };
 });
 
 $: overlayTop = (searchFocused || voiceSearchActive) ? 24 : 16;
@@ -73,15 +95,20 @@ function closeSheet() {
   selectedItem.set(undefined);
   previousSelectedItem.set(undefined);
 }
+
 </script>
+
 
 <!-- Centered floating header and search overlay, always visible at the top -->
 <div class="absolute left-0 w-full z-100 flex flex-col items-center pointer-events-none" style="top: {overlayTop}px; margin-left: {overlayLeft}; transition: margin-left 0.2s cubic-bezier(.4,0,.2,1);">
     <div bind:this={overlayRef} class="w-full max-w-2xl mx-auto flex flex-col items-stretch pointer-events-auto relative" style="z-index:100;">
+<!--        <div class="lang-switcher-bar">-->
+<!--          <LanguageSwitcher />-->
+<!--        </div>-->
         {#if !(searchFocused || voiceSearchActive || $selectedItem || search)}
             <Header title="Majestic Bus Station" />
         {/if}
-        <SearchBar
+        <Searchbar
             bind:search
             bind:searchFocused
             {speechSupported}
@@ -114,51 +141,4 @@ function closeSheet() {
 /*  flex: 1 1 0%;*/
 /*  display: flex;*/
 /*}*/
-.app-grid {
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1;
-}
-.searchbar-sidebar-row {
-    width: 100vw;
-    left: 0;
-    right: 0;
-    pointer-events: auto;
-    position: static;
-    z-index: auto;
-}
-.sidebar-container {
-    display: none;
-}
-@media (min-width: 600px) {
-    .sidebar-container {
-        display: block;
-        min-width: 380px;
-        max-width: 380px;
-        height: 100vh;
-    }
-    .searchbar-overlay {
-        width: auto;
-        flex: 1;
-        pointer-events: auto;
-    }
-    .searchbar-inner {
-        max-width: 672px;
-        width: 100%;
-    }
-}
-.searchbar-overlay {
-    width: 100vw;
-    pointer-events: auto;
-}
-.searchbar-inner {
-    width: 100vw;
-    max-width: 100vw;
-    pointer-events: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    overflow: visible;
-}
 </style>
