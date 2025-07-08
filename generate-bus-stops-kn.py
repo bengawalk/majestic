@@ -1,6 +1,7 @@
 import csv
 import asyncio
 import aiohttp
+import sys
 
 INPUT_CSV = 'input/bus-stops.csv'
 OUTPUT_CSV = 'input/bus-stops-kn.csv'
@@ -34,6 +35,26 @@ async def fetch_kn(session, stop, sem, retries=RETRIES):
                     return stop, stop
     return stop, stop
 
+def shakedown_bus_stops_kn():
+    input_path = OUTPUT_CSV
+    output_path = OUTPUT_CSV
+    best = {}
+    with open(input_path, encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            stop = row['stop_name'].strip()
+            stop_kn = row['stop_name_kn'].strip()
+            if stop and stop_kn:
+                # Keep the row with the longest stop_kn for each stop
+                if stop not in best or len(stop_kn) > len(best[stop]):
+                    best[stop] = stop_kn
+    with open(output_path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(['stop_name', 'stop_name_kn'])
+        for stop in sorted(best):
+            writer.writerow([stop, best[stop]])
+    print(f"Wrote {len(best)} unique stops (by stop_name, longest stop_name_kn) to {output_path}")
+
 async def main():
     # Read all unique stops
     stops = set()
@@ -64,4 +85,7 @@ async def main():
     print(f"Wrote {len(results)} stops to {OUTPUT_CSV}")
 
 if __name__ == '__main__':
-    asyncio.run(main()) 
+    if len(sys.argv) > 1 and sys.argv[1] == 'shakedown':
+        shakedown_bus_stops_kn()
+    else:
+        asyncio.run(main()) 

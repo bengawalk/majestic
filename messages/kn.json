@@ -2,11 +2,11 @@
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"hello_world": "Hello, {name} from kn!",
 	"via": "%1 ಮೂಲಕ",
-	"search": "ಬಸ್ ಸಂಖ್ಯೆ ಅಥವಾ ಗಮ್ಯಸ್ಥಾನದ ಮೂಲಕ ಹುಡುಕಿ",
+	"search": "ಬಸ್ ಸಂಖ್ಯೆ ಅಥವಾ ನಿರ್ದಿಷ್ಟ ಸ್ಥಳದ ಮೂಲಕ ಹುಡುಕಿ",
 	"buses_to": "%1ಗೆ ಬಸ್ಸುಗಳು",
-	"other_buses_to": "%1 ಪ್ರದೇಶಕ್ಕೆ ಇತರ ಬಸ್ಸುಗಳು",
-	"platform": "ಪ್ಲಟ್ೞೊರ್ಂ %1",
-	"back": "ಹಿಂದೆ",
+	"other_buses_to": "%1ಗೆ ಹೋಗುವ ಇತರ ಬಸ್ಸುಗಳು",
+	"platform": "ಪ್ಲಾಟ್ಫಾರ್ಮ್ %1",
+	"back": "ಹಿಂತಿರುಗಿ",
 	"header": "ಕೆಂಪೇಗೌಡ ಬಸ್ ನಿಲ್ದಾಣದ",
 	"lan": "English"
 }
