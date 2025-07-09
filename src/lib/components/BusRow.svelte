@@ -26,12 +26,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 6px 12px;
+  padding: 6px 12px 12px;
   gap: 8px;
   position: relative;
   min-width: 0;
   max-width: 100%;
-  min-height: 87px;
   background: #EEEEEE;
   border-radius: 8px;
   cursor: pointer;

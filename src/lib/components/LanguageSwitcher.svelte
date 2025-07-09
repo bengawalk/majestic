@@ -23,15 +23,16 @@
   border: none;
   color: #007aff;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   padding: 4px 12px;
   border-radius: 8px;
   transition: background 0.15s;
+  font-family: -apple-system,BlinkMacSystemFont,sans-serif;
   outline: none;
   text-align: right;
 }
 .lang-switcher:active {
-  background: #e5e5ea;
+  background: rgba(229, 229, 234, 0.3);
 }
 </style> 

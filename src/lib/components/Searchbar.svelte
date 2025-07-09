@@ -269,6 +269,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 .cupertino-back-row {
   width: 100%;
   display: flex;
@@ -280,8 +281,8 @@
   border: none;
   color: #007aff;
   font-size: 19px;
-  font-weight: 500;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  font-weight: 400;
+  font-family: -apple-system,BlinkMacSystemFont,sans-serif;
   padding: 4px 12px 4px 0;
   cursor: pointer;
   border-radius: 8px;
@@ -292,7 +293,7 @@
   align-items: center;
 }
 .cupertino-back-text:active {
-  background: #e5e5ea;
+  background: rgba(229, 229, 234, 0.3);
 }
 .cupertino-back-text .material-icons {
   font-size: 28px;
@@ -321,14 +322,15 @@
 .cupertino-searchbar {
   display: flex;
   align-items: center;
-  background: #f1f1f3;
+  background: #FFFFFF;
   border-radius: 14px;
   border: 1px solid #e0e0e5;
   box-shadow: 0 1px 6px 0 rgba(60,60,67,0.06);
   padding: 0 10px;
   height: 44px;
   width: 100%;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family: Manrope, sans-serif;
+  font-weight: 400;
   transition: box-shadow 0.2s, background 0.2s;
   position: relative;
   z-index: 100;
@@ -347,7 +349,7 @@
   font-size: 17px;
   color: #222;
   padding: 0 6px;
-  font-family: inherit;
+  font-family: Manrope, sans-serif;
 }
 .cupertino-input::placeholder {
   color: #8e8e93;

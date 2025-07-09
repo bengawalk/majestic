@@ -80,6 +80,7 @@
 {/if}
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
 .cupertino-suggestions-dropdown {
   position: absolute;
   left: 0;
@@ -93,7 +94,7 @@
   padding: 8px 0;
   max-height: 260px;
   overflow-y: auto;
-  font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 .cupertino-suggestion-item {
   padding: 14px 20px 14px 20px;
