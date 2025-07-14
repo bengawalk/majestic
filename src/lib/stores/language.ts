@@ -10,8 +10,9 @@ const getInitialLanguage = (): AvailableLanguageTag => {
   }
   return 'en';
 };
-
-export const language = writable<AvailableLanguageTag>(getInitialLanguage());
+const initialTag = getInitialLanguage();
+setLocale(initialTag);
+export const language = writable<AvailableLanguageTag>(initialTag);
 
 if (typeof window !== 'undefined') {
   language.subscribe((value) => {
