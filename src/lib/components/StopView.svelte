@@ -6,6 +6,9 @@
   import {language} from "$lib/stores/language";
   import {messages} from "$lib/stores/messages";
   import BusRow from './BusRow.svelte';
+  import type {Route} from "$lib/types/Route";
+  import {results, setResults} from "$lib/stores/results";
+  import {tick} from "svelte";
 
   // Helper to get platform color
   function getPlatformColor(platformNumber) {
@@ -23,12 +26,24 @@
       mainRoutes = all.filter(r => r.platformNumber.trim() === $selectedItem.display.trim());
     }
     if ($selectedItem.type === 'Stop') {
-      mainRoutes = all.filter(r => r.stops && r.stops.some(s => s.name === $selectedItem.display));
+      mainRoutes = all
+              .filter(r => r.stops && r.stops.some(s => s.name === $selectedItem.display))
+              .sort((a: Route, b: Route) =>
+                      a.stops.slice(Math.max(0, a.stops.findIndex((s) => s.name === 'Kempegowda Bus Station')), a.stops.findIndex((s) => s.name === $selectedItem.display)).length - b.stops.slice(Math.max(0, b.stops.findIndex(s => s.name === 'Kempegowda Bus Station')), b.stops.findIndex((s) => s.name === $selectedItem.display)).length)
+      ;
       areaRoutes = all.filter(r => ((r.area && r.area.name.trim() === $selectedItem.display.trim()) || (r.via && r.via.name.trim() === $selectedItem.display.trim())) && !mainRoutes.includes(r));
-      // console.log("ROUTES", mainRoutes, areaRoutes);
+      // console.log("ROUTES SORTED", mainRoutes.map(s =>
+      // {
+      //   return {
+      //     number: s.number,
+      //     stops: s.stops.slice(Math.max(0, s.stops.findIndex((c) => c.name === 'Kempegowda Bus Station')), s.stops.findIndex((c) => c.name === $selectedItem.display))
+      //   }
+      // }));
     } else if ($selectedItem.type === 'Area') {
       mainRoutes = all.filter(r => ((r.area && r.area.name === $selectedItem.display) || (r.via && r.via.name === $selectedItem.display)));
     }
+    tick().then(() => setResults(mainRoutes))
+    // updatePlatformColors();
   }
 
   function handleRouteClick(route) {
@@ -77,6 +92,6 @@
 .stopview-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 </style> 

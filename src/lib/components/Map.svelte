@@ -2,11 +2,11 @@
     import maplibregl from 'maplibre-gl';
     import 'maplibre-gl/dist/maplibre-gl.css';
     import {onMount, tick} from 'svelte';
-    import { setPlatforms } from '$lib/stores/platforms';
-    import { setRoutes } from '$lib/stores/routes';
+    import {setPlatforms} from '$lib/stores/platforms';
+    import {setRoutes} from '$lib/stores/routes';
     import {results, setResults} from '$lib/stores/results';
-    import { get } from 'svelte/store';
-    import { Platform } from '$lib/types/Platform';
+    import {get} from 'svelte/store';
+    import {Platform} from '$lib/types/Platform';
     import {previousSelectedItem, selectedItem} from '$lib/stores/selectedItem';
 
     const MAJESTIC_CENTER: maplibregl.LngLatLike = [77.5724549, 12.9772291]; // [lng, lat]
@@ -125,16 +125,18 @@
             // Add platforms geojson
             fetch('/data/platforms-routes-majestic.geojson')
                 .then(r => r.json())
-                .then(data => {
+                .then((data: GeoJSON.FeatureCollection) => {
                     if(!map) return;
                     // Set isGray property for all features initially
                     const currentResults = get(results);
                     const resultRouteIds = new Set(currentResults ? currentResults.map(r => r.number) : []);
+                    // const bounds = new maplibregl.LngLatBounds();
                     for (const feature of data.features) {
+                        // bounds.extend((feature.geometry as GeoJSON.Point).coordinates);
                         const platformRoutes = (feature.properties && Array.isArray(feature.properties.Routes)) ? feature.properties.Routes : [];
-                        const isGray = !platformRoutes.some((route) => Object.hasOwn(route, 'Route') && resultRouteIds.has(route.Route));
-                        feature.properties.isGray = isGray;
+                        feature.properties!.isGray = !platformRoutes.some((route) => Object.hasOwn(route, 'Route') && resultRouteIds.has(route.Route));
                     }
+                    // map.fitBounds(bounds, {padding: 200});
                     platformsGeoJson = data;
                     // Store platforms as Platform class instances
                     const platformsArr = (data.features || []).map(feature => {
@@ -181,7 +183,15 @@
                         source: 'platforms',
                         filter: ['==', ['get', 'isGray'], true],
                         paint: {
-                            'circle-radius': 16,
+                            'circle-radius': [
+                                'interpolate',
+                                ['linear'],
+                                ['zoom'],
+                                13.7, 2,
+                                14.7, 2.25,
+                                15.7, 6,
+                                16.7, 16
+                            ],
                             'circle-color': '#D2D2D2'
                         }
                     });
@@ -201,7 +211,14 @@
                         },
                         paint: {
                             'text-color': '#fff',
-                            'text-halo-width': 0
+                            'text-halo-width': 0,
+                            'text-opacity': [
+                                'interpolate',
+                                ['linear'],
+                                ['zoom'],
+                                16.5, 0,
+                                16.7, 1
+                            ]
                         }
                     });
                     // Add colored platforms layer (top)
@@ -211,7 +228,16 @@
                         source: 'platforms',
                         filter: ['==', ['get', 'isGray'], false],
                         paint: {
-                            'circle-radius': 16,
+                            'circle-radius': [
+                                'interpolate',
+                                ['linear'],
+                                ['zoom'],
+                                // 12.7, 0.31,
+                                13.7, 2,
+                                14.7, 2.25,
+                                15.7, 6,
+                                16.7, 16
+                            ],
                             'circle-color': [
                                 'coalesce',
                                 ['get', 'Color'],
@@ -227,7 +253,18 @@
                         filter: ['==', ['get', 'isGray'], false],
                         layout: {
                             'text-field': ['get', 'Platform'],
-                            'text-size': 16,
+                            'text-size': 16
+                            //     [
+                            //     'interpolate',
+                            //     ['linear'],
+                            //     ['zoom'],
+                            //     12, 1,
+                            //     13, 2,
+                            //     14, 4,
+                            //     15, 8,
+                            //     16.5, 16
+                            // ]
+                            ,
                             'text-font': ['Manrope SemiBold'],
                             'text-offset': [0, 0],
                             'text-anchor': 'center',
@@ -235,7 +272,14 @@
                         },
                         paint: {
                             'text-color': '#fff',
-                            'text-halo-width': 0
+                            'text-halo-width': 0,
+                            'text-opacity': [
+                                'interpolate',
+                                ['linear'],
+                                ['zoom'],
+                                16.5, 0,
+                                16.7, 1
+                            ]
                         }
                     });
                     // Remove the original single platform-circles and platform-labels layers if present
@@ -287,8 +331,7 @@
                                 // Permission granted, update the geolocate control's marker without flying
                                 // This is a workaround: set the control's _lastKnownPosition and emit the event
                                 if (geolocate._updateMarker) {
-                                    console.log("UPDATING");
-                                    geolocate._updateMarker({ coords: pos.coords });
+                                    geolocate._updateMarker(pos);
                                 }
                             },
                             () => {

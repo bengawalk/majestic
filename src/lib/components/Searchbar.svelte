@@ -280,7 +280,7 @@
   background: none;
   border: none;
   color: #007aff;
-  font-size: 19px;
+  font-size: 1rem;
   font-weight: 400;
   font-family: -apple-system,BlinkMacSystemFont,sans-serif;
   padding: 4px 12px 4px 0;

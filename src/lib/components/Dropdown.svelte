@@ -1,7 +1,6 @@
 <script lang="ts">
   import {search} from "$lib/stores/search";
   import {previousSelectedItem, selectedItem} from "$lib/stores/selectedItem";
-  import RouteIcon from "../../assets/icons/route.svg";
   import BusModal from "$lib/components/BusModal.svelte";
 
   export let suggestions: { type: string; value: string; display: string; displayKannada?: string; }[] = [];

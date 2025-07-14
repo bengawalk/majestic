@@ -26,7 +26,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 6px 12px 12px;
+  padding: 14px;
   gap: 8px;
   position: relative;
   min-width: 0;
@@ -43,6 +43,7 @@
   gap: 8px;
   width: 100%;
   position: relative;
+  margin-bottom: -2px;
 }
 .platform-circle {
   display: flex;
@@ -54,12 +55,12 @@
   width: 29px;
   height: 29px;
   /*background: #DE3D82;*/
-  border-radius: 20.2px;
+  border-radius: 20px;
   color: #fff;
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
   font-size: 14px;
-  line-height: 19px;
+  /*line-height: 19px;*/
 }
 .busrow-chevron {
   margin-left: auto;
@@ -79,17 +80,17 @@
 }
 .busrow-dest {
   font-family: 'Manrope', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #1A1A1A;
-  line-height: 12px;
+  padding-bottom: 1px;
 }
 .busrow-via {
   display: flex;
   flex-direction: row;
   gap: 4px;
   font-family: 'Manrope', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: #585858;
   line-height: 10px;
 }

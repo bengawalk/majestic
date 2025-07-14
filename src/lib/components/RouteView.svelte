@@ -1,10 +1,13 @@
 <style>
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
   @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap');
   .routeview-sheet {
     background: #f5f5f7;
     border-radius: 10px 10px 0 0;
     padding: 0;
     font-family: 'Manrope', sans-serif;
+    min-width: 0;
+    max-width: 100%;
   }
   .routeview-header {
     display: flex;
@@ -24,6 +27,8 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    min-width: 0;
+    flex-shrink: 1;
   }
   .routeview-header-row {
     display: flex;
@@ -34,6 +39,7 @@
     flex: none;
     order: 0;
     flex-grow: 0;
+    min-width: 0;
   }
   .platform-circle {
     display: flex;
@@ -67,6 +73,7 @@
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+    flex-shrink: 1;
   }
   .routeview-via-row {
     display: flex;
@@ -90,17 +97,6 @@
     order: 0;
     flex-grow: 0;
   }
-  .routeview-via-value {
-    font-family: 'Manrope', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 22px;
-    color: #585858;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  }
   .stops-container {
     position: relative;
     margin-left: 33px;
@@ -120,7 +116,7 @@
   .stops-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 22px;
     align-items: flex-start;
     position: relative;
     z-index: 5;
@@ -129,49 +125,65 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 17px;
-    height: 18px;
+    gap: 16px;
+    /*height: 19px;*/
   }
   .stop-circle {
-    width: 18px;
-    height: 18px;
-    background: #494949;
+    width: 7px;
+    height: 7px;
+    background: #CE242B;
     border-radius: 50%;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    /*box-shadow: 0 1px 4px rgba(0,0,0,0.04);*/
     flex-shrink: 0;
-    margin-left: 2px;
+    /*margin-left: 2px;*/
   }
   .stop-icon {
     display: flex;
     align-items: center;
     width: 20px;
     height: 20px;
-    margin-left: 1px;
+    margin-left: -6px;
+    margin-right: -6px;
   }
   .stop-name {
     font-family: 'Manrope', sans-serif;
     font-size: 14px;
-    line-height: 19px;
+    /*line-height: 1px;*/
     color: #1A1A1A;
     font-weight: 400;
     word-break: break-word;
-    max-width: 260px;
+    /*max-width: 260px;*/
+  }
+  .previous-selected {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    /*line-height: 19px;*/
+    color: #1A1A1A;
+    word-break: break-word;
+    font-weight: 600;
   }
   .chevron-btn {
     background: none;
     border: none;
     padding: 0 8px 0 0;
-    margin-right: -20px;
-    margin-left: -24px;
+    margin-right: -10px;
+    margin-left: -28px;
     display: flex;
     align-items: center;
     height: 32px;
     width: 32px;
     cursor: pointer;
   }
-  .chevron-btn svg {
-    display: block;
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: 400;
+    font-size: 32px;
+    color: #3C3C434D;
+    display: inline-block;
   }
+  /*.chevron-btn svg {*/
+  /*  display: block;*/
+  /*}*/
 </style>
 <script lang="ts">
   import { platforms } from '$lib/stores/platforms';
@@ -181,11 +193,14 @@
   import { selectedItem, previousSelectedItem } from '$lib/stores/selectedItem';
   import BusModal from './BusModal.svelte';
   import LocationStar from '../../assets/icons/location-star.svg';
+  import {setResults} from "$lib/stores/results";
+  import {tick} from "svelte";
 
   let findRoute = null;
   if ($selectedItem && $selectedItem.type === 'Route') {
     if ($selectedItem.value) {
       findRoute = $routes.find(r => r.number == $selectedItem.value);
+      tick().then(() => setResults([findRoute]));
     } else {
       findRoute = $selectedItem;
     }
@@ -202,10 +217,11 @@
       previousSelectedItem.set(undefined);
     }
   }
-  const stopCount = findRoute?.stops?.length || 0;
-  const trackGap = 58.658;
-  const circleHeight = 19;
-  const trackHeight = stopCount > 1 ? (stopCount - 1) * trackGap + circleHeight : circleHeight;
+  // const stopCount = findRoute?.stops?.length || 0;
+  // const trackGap = 58.658;
+  // const circleHeight = 19;
+  // const trackHeight = stopCount > 1 ? (stopCount - 1) * trackGap + circleHeight : circleHeight;
+  // console.log($previousSelectedItem);
 </script>
 
 {#if $selectedItem && $selectedItem.type === 'Route' && findRoute}
@@ -214,8 +230,8 @@
       <div class="routeview-header-group">
         <div class="routeview-header-row">
           {#if $previousSelectedItem}
-            <button class="chevron-btn" on:click={handleChevronClick} aria-label="Back">
-              <svg width="24" height="24" viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/></svg>
+            <button class="chevron-btn" on:click={handleChevronClick}>
+              <span class="material-icons" aria-hidden="true">chevron_left</span>
             </button>
           {/if}
           <div class="platform-circle" style="background:{platformColor}">{findRoute.platformNumber}</div>
@@ -243,7 +259,7 @@
             {:else}
               <div class="stop-circle"></div>
             {/if}
-            <div class="stop-name">{$language === 'en' ? stop.name : stop.nameKannada}</div>
+            <div class={$previousSelectedItem && $previousSelectedItem.type === 'Stop' && $previousSelectedItem.value.trim() === stop.name.trim() ? 'previous-selected' : 'stop-name'}>{$language === 'en' ? stop.name : stop.nameKannada}</div>
           </div>
         {/each}
       </div>

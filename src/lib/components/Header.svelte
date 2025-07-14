@@ -26,8 +26,8 @@
   padding-right: 16px;
 }
 .cupertino-header h1 {
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 22px;
+  font-weight: 700;
   color: #222;
   font-family: 'Manrope', sans-serif;
   text-align: left;

@@ -4,6 +4,8 @@
   import StopView from './StopView.svelte';
   import { search } from '$lib/stores/search'; // adjust path if needed
   import { selectedItem } from '$lib/stores/selectedItem';
+  import {setResults} from "$lib/stores/results";
+  import {routes} from "$lib/stores/routes";
   const dispatch = createEventDispatcher();
   let isWide = false;
   let paneInstance = null;
@@ -49,6 +51,7 @@
     }
     search.set('');
     selectedItem.set(undefined);
+    tick().then(() => setResults($routes))
   }
 
   onMount(() => {
