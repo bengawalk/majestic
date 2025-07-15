@@ -1,5 +1,6 @@
 # Majestic
 ### Platform, route / bus, stop web-app for the majestic bus stand
+A mobile-friendly single-page PWA that facilitates easy navigation of the Kempegowda Bus Stand (Majestic): https://majestic.bengawalk.com
 
 #### Setup
 
