@@ -1,20 +1,25 @@
 # Majestic
 ### Platform, route / bus, stop web-app for the majestic bus stand
-A mobile-friendly single-page PWA that facilitates easy navigation of the Kempegowda Bus Stand (Majestic): https://majestic.bengawalk.com
+A mobile-friendly single-page PWA that facilitates easy navigation of the Kempegowda Bus Stand (Majestic): https://majestic.bmtc.co.in
 
 #### Setup
 
 - To set up the project, for development or otherwise, first run `yarn install`
 - Once the packages have been installed, `yarn dev` will run the applet locally, while `yarn build` will create a build folder.
 
+#### Translations
+
+Translation strings for data elements are provided with the data, while other translations are stored in `messages/`. 
+Translation related settings (e.g default locale) are stored in `project.inlang/settings.json`.
+
 #### Data
 
-All input data is stored in `input/`.
+All input data is stored in `input/`:
 
 - `platforms-majestic.geojson`: Platform coordinates
 - `platform-index.csv`: Platform <-> Route mappings
-- `bus-stops.csv`: Stops of a route
-- `bus-stops-kn.csv`: Stop <-> Stop name in Kannada
+- `bus-stops.csv`: Stops of a route in English
+- `bus-stops-kn.csv`: Stop in English <-> Stop in Kannada
 
 Python scripts to process the data are stored in the root project folder.
 
