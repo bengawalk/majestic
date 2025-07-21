@@ -1,0 +1,28 @@
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Install yarn dependencies and build site package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: 
+          node-version: 20
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+        with:
+          path: build
+  publish:
+    needs: build  # Ensures deployment completes before publishing
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        # Publishes the site to GitHub Pages
+        uses: actions/deploy-pages@v4
