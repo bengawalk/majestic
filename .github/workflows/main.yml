@@ -2,6 +2,9 @@ on:
   push:
     branches:
       - main
+env:
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 jobs:
   build:
     name: Install yarn dependencies and build site package
@@ -19,6 +22,28 @@ jobs:
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
         with:
           path: build
+  cloudfront:
+    needs: build 
+    name: Deploy site package to cloudfront
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: build
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-south-1
+
+      - name: Deploy to s3 bucket
+        run: aws s3 sync ./build s3://${{ secrets.AWS_BPT_FRONTEND_BUCKET }}/
+
+      - name: Invalidate cloudfront
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_BPT_CLOUDFRONT_DIST }} --paths "/*"
   publish:
     needs: build  # Ensures deployment completes before publishing
     runs-on: ubuntu-latest
