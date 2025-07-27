@@ -17,15 +17,19 @@ jobs:
           cache: yarn
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - name: Upload static files as artifact
+      - name: Upload artifact for S3/CloudFront
         id: deployment
         uses: actions/upload-artifact@v4
         with:
           name: build-files
           path: build
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
   cloudfront:
     needs: build 
-    name: Deploy site package to cloudfront
+    name: Deploy to Cloudfront
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
@@ -46,12 +50,12 @@ jobs:
       - name: Invalidate cloudfront
         run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_MAJESTIC_CLOUDFRONT_DIST }} --paths "/*"
   publish:
-    needs: build  # Ensures deployment completes before publishing
+    needs: build
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     permissions:
-      pages: write      # to deploy to Pages
-      id-token: write   # to verify the deployment originates from an appropriate source
+      pages: write
+      id-token: write
     steps:
       - name: Deploy to GitHub Pages
-        # Publishes the site to GitHub Pages
         uses: actions/deploy-pages@v4
