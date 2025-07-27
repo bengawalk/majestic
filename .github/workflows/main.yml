@@ -40,10 +40,10 @@ jobs:
           aws-region: ap-south-1
 
       - name: Deploy to s3 bucket
-        run: aws s3 sync ./build s3://${{ secrets.AWS_BPT_FRONTEND_BUCKET }}/
+        run: aws s3 sync ./build s3://${{ secrets.AWS_MAJESTIC_FRONTEND_BUCKET }}/
 
       - name: Invalidate cloudfront
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_BPT_CLOUDFRONT_DIST }} --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_MAJESTIC_CLOUDFRONT_DIST }} --paths "/*"
   publish:
     needs: build  # Ensures deployment completes before publishing
     runs-on: ubuntu-latest
