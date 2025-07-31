@@ -130,13 +130,13 @@
                     // Set isGray property for all features initially
                     const currentResults = get(results);
                     const resultRouteIds = new Set(currentResults ? currentResults.map(r => r.number) : []);
-                    // const bounds = new maplibregl.LngLatBounds();
+                    const bounds = new maplibregl.LngLatBounds();
                     for (const feature of data.features) {
-                        // bounds.extend((feature.geometry as GeoJSON.Point).coordinates);
+                        bounds.extend((feature.geometry as GeoJSON.Point).coordinates);
                         const platformRoutes = (feature.properties && Array.isArray(feature.properties.Routes)) ? feature.properties.Routes : [];
                         feature.properties!.isGray = !platformRoutes.some((route) => Object.hasOwn(route, 'Route') && resultRouteIds.has(route.Route));
                     }
-                    // map.fitBounds(bounds, {padding: 200});
+                    map.fitBounds(bounds, {padding: 200});
                     platformsGeoJson = data;
                     // Store platforms as Platform class instances
                     const platformsArr = (data.features || []).map(feature => {
