@@ -121,6 +121,8 @@
             //         'raster-opacity': 1
             //     }
             // });
+            const urlParams = new URLSearchParams(window.location.search);
+            const paramValue = urlParams.get('pf');
 
             // Add platforms geojson
             fetch('/data/platforms-routes-majestic.geojson')
@@ -338,6 +340,12 @@
                                 // Permission denied or failed, do nothing
                             }
                         );
+                        if(paramValue) {
+                            const searchResult = platformsArr.find((val) => {
+                                return paramValue.trim().toUpperCase() == val.platformNumber
+                            })
+                            if(searchResult) selectedItem.set({ type: 'Platform', display: searchResult.platformNumber });
+                        }
                     }
                 });
         });
