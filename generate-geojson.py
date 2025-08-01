@@ -17,9 +17,9 @@ with open(platform_index_path, encoding='utf-8') as f:
     for row in reader:
         platform_number = row['Platform Number'].strip()
         platform_index[platform_number].append(row)
-
 # Read bus stops from bus-stops.csv
 bus_stops_by_route = defaultdict(list)
+seen_bus_routes = set()
 with open(bus_stops_path, encoding='utf-8') as f:
     reader = csv.reader(f)
     header = next(reader)  # Skip header row
@@ -29,6 +29,7 @@ with open(bus_stops_path, encoding='utf-8') as f:
             # Get all stops from the row (skip empty cells)
             stops = [stop.strip() for stop in row[1:] if stop and stop.strip()]
             bus_stops_by_route[route_number] = stops
+            seen_bus_routes.add(route_number)
 
 # Read Kannada stop names
 stop_kn_lookup = {}
@@ -80,6 +81,8 @@ for plat_num, plat_rows in platform_index.items():
             stops = []
             stops_source = "bus-stops.csv"
             if bus_number in bus_stops_by_route:
+                if bus_number in seen_bus_routes:
+                    seen_bus_routes.remove(bus_number)
                 previous = ""
                 stops = []
                 for x in bus_stops_by_route[bus_number]:
@@ -147,5 +150,7 @@ geojson = {
 
 with open(output_geojson_path, 'w', encoding='utf-8') as f:
     json.dump(geojson, f, ensure_ascii=False, indent=2)
+
+print(f"Missing Platform Index data for the following routes: {seen_bus_routes}")
 
 print(f"Wrote {len(features)} platform features to {output_geojson_path}")
