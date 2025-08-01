@@ -24,7 +24,8 @@ All input data is stored in `input/`:
 Python scripts to process the data are stored in the root project folder.
 
 - `generate-geojson.py`: Takes all available data in `input/` to create `platform-routes-majestic.geojson` (used by applet for all data)
-- `generate-bus-stops-kn.py`: Takes all available unique stops in bus-stops.csv, and uses varnam's transliteration API to generate bus-stops-kn.csv
+- `update-platform-index.py`: Reads a temporary bus-stops-pf.csv with platform information and modifies existing platform values to the new ones.
+- `generate-bus-stops-kn.py`: Takes all available unique stops in bus-stops.csv, and uses varnam's transliteration API to generate bus-stops-kn.csv (not used as we now receive a bus-stops-kn.csv)
 
 The final output file is `static/data/platforms-routes-majestic.geojson`. This is available on the build under `data/platforms-routes-majestic.geojson`.
 This output file is used by the applet to read platform, route / bus, and stop information.
