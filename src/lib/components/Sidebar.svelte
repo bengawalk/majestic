@@ -60,19 +60,19 @@
   async function copySelectedItemLink() {
     const s = get(selectedItem);
     if(s.type == 'Platform') { // Platform link
-      await navigator.clipboard.writeText(`${window.location.origin}/?pf=${s.display}`);
+      await navigator.clipboard.writeText(`${window.location.origin}/?pf=${encodeURIComponent(s.display)}`);
       copied = true;
     }
     else if (s.type === 'Route') { // Route link
-      await navigator.clipboard.writeText(`${window.location.origin}/?r=${s.value}`);
+      await navigator.clipboard.writeText(`${window.location.origin}/?r=${encodeURIComponent(s.value)}`);
       copied = true;
     }
     else if (s.type === 'Area') { // Area / Via link
-      await navigator.clipboard.writeText(`${window.location.origin}/?a=${s.display}`);
+      await navigator.clipboard.writeText(`${window.location.origin}/?a=${encodeURIComponent(s.display)}`);
       copied = true;
     }
     else if (s.type === 'Stop') { // Stop link
-      await navigator.clipboard.writeText(`${window.location.origin}/?s=${s.display}`);
+      await navigator.clipboard.writeText(`${window.location.origin}/?s=${encodeURIComponent(s.display)}`);
       copied = true;
     }
     if (copied) {
