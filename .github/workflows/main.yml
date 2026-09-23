@@ -27,9 +27,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: build
-  cloudfront:
+  cloudflare:
     needs: build 
-    name: Deploy to Cloudfront
+    name: Deploy to Cloudflare
     runs-on: ubuntu-latest
     steps:
       - name: Download build artifact
@@ -37,18 +37,16 @@ jobs:
         with:
           name: build-files
           path: build
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1
-
-      - name: Deploy to s3 bucket
-        run: aws s3 sync ./build s3://${{ secrets.AWS_MAJESTIC_FRONTEND_BUCKET }}/
-
-      - name: Invalidate cloudfront
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_MAJESTIC_CLOUDFRONT_DIST }} --paths "/*"
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: 'majestic-bengawalk-com'
+          directory: 'build'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: 'main'
   publish:
     needs: build
     name: Deploy to GitHub Pages
