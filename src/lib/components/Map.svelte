@@ -1,6 +1,13 @@
 <script lang="ts">
-    import maplibregl from 'maplibre-gl';
+    import type MapLibreGL from 'maplibre-gl';
     import 'maplibre-gl/dist/maplibre-gl.css';
+    // Vite's dev-server dep pre-bundling of maplibre-gl corrupts its worker
+    // protocol (vector tiles "load" successfully but parse with zero
+    // features - the ESBuild-transformed main-thread copy and the raw
+    // worker copy end up out of sync). Loading the untouched UMD build as a
+    // plain script, exactly like a <script> tag would, sidesteps the bundler
+    // entirely and keeps both sides consistent.
+    import maplibreGlUrl from 'maplibre-gl/dist/maplibre-gl.js?url';
     import {onMount, tick} from 'svelte';
     import {setPlatforms} from '$lib/stores/platforms';
     import {setRoutes} from '$lib/stores/routes';
@@ -9,7 +16,22 @@
     import {Platform} from '$lib/types/Platform';
     import {previousSelectedItem, selectedItem} from '$lib/stores/selectedItem';
 
-    const MAJESTIC_CENTER: maplibregl.LngLatLike = [77.5724549, 12.9772291]; // [lng, lat]
+    let maplibregl: typeof MapLibreGL;
+
+    async function loadMaplibreGl(): Promise<typeof MapLibreGL> {
+        const w = window as unknown as { maplibregl?: typeof MapLibreGL };
+        if (w.maplibregl) return w.maplibregl;
+        await new Promise<void>((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = maplibreGlUrl;
+            script.onload = () => resolve();
+            script.onerror = () => reject(new Error('Failed to load maplibre-gl'));
+            document.head.appendChild(script);
+        });
+        return w.maplibregl!;
+    }
+
+    const MAJESTIC_CENTER: MapLibreGL.LngLatLike = [77.5724549, 12.9772291]; // [lng, lat]
 
     // // Raster overlay boundaries
     // let overlayBounds = [
@@ -31,7 +53,7 @@
     //     ]
     // ];
 
-    let map: maplibregl.Map | undefined;
+    let map: MapLibreGL.Map | undefined;
     let platformsGeoJson: GeoJSON.FeatureCollection | null = null;
 
     function updatePlatformColors() {
@@ -54,45 +76,49 @@
         }
         // Update the map source
         if (map.getSource('platforms')) {
-            (map.getSource('platforms')! as maplibregl.GeoJSONSource).setData(updated);
+            (map.getSource('platforms')! as MapLibreGL.GeoJSONSource).setData(updated);
         }
     }
 
     onMount(() => {
+        let cancelled = false;
+        let unsub: () => void;
 
-        map = new maplibregl.Map({
-            container: 'map',
-            style: {
-                version: 8,
-                glyphs: 'glyphs/{fontstack}/{range}.pbf',
-                sources: {
-                    carto: {
-                        type: 'raster',
-                        tiles: [
-                            'https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'
-                        ],
-                        tileSize: 256,
-                        attribution: '© OpenStreetMap contributors, © CartoDB'
-                    }
-                },
-                layers: [
-                    {
-                        id: 'carto',
-                        type: 'raster',
-                        source: 'carto'
-                    }
-                ]
-            },
-            center: MAJESTIC_CENTER,
-            zoom: 16.8,
-            dragRotate: false,
-            bearing: 0,
-            pitch: 0,
-            maxPitch: 0,
-            minPitch: 0
-        });
+        (async () => {
+            const [gl, style] = await Promise.all([
+                loadMaplibreGl(),
+                // OpenFreeMap ships a full style (sources + layers), not a tile URL,
+                // so fetch it and only swap in our locally-hosted glyphs.
+                fetch('https://tiles.openfreemap.org/styles/positron').then(r => r.json()) as Promise<MapLibreGL.StyleSpecification>
+            ]);
+            // We only host glyphs for our own "Manrope SemiBold", so every
+            // symbol layer (OpenFreeMap's basemap labels and, later, ours)
+            // is pointed at it - any font that isn't fully covered here
+            // 404s mid-tile-parse and silently kills that tile's rendering
+            // entirely, not just its labels.
+            style.glyphs = `${window.location.origin}/glyphs/{fontstack}/{range}.pbf`;
+            for (const layer of style.layers) {
+                if (layer.type === 'symbol' && layer.layout && 'text-font' in layer.layout) {
+                    layer.layout['text-font'] = ['Manrope SemiBold'];
+                }
+            }
+
+            if (cancelled) return;
+
+            maplibregl = gl;
+            map = new maplibregl.Map({
+                container: 'map',
+                style,
+                center: MAJESTIC_CENTER,
+                zoom: 16.8,
+                dragRotate: false,
+                bearing: 0,
+                pitch: 0,
+                maxPitch: 0,
+                minPitch: 0
+            });
         // Subscribe to results and update platform colors on change
-        const unsub = results.subscribe(() => {
+        unsub = results.subscribe(() => {
             if (map && platformsGeoJson) {
                 updatePlatformColors();
             }
@@ -359,11 +385,12 @@
                     }
                 });
         });
+        })();
 
         return () => {
-            if(map)
-                map.remove();
-            unsub();
+            cancelled = true;
+            if (map) map.remove();
+            if (unsub) unsub();
         };
     });
 
